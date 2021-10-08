@@ -1,4 +1,17 @@
 # rpsProject
+Team Name: Full-Stack Senders
+Section: B
+Lab: 3
+Group Member Names and Emails: 
+- Harsh Kuddu - harshk10@my.yorku.ca
+- Saieda Muntaha Begum - muntahab@my.yorku.ca 
+- Nathaniel Acker - nacker@my.yorku.ca
+
+Project Title: Rock Paper Scissors (rps)
+
+Description:
+The objective of our project is to successfully develop a rock paper scissors game. When completed, the user should be able to access a home screen with a start button and instructions on how to play the game. When start is pressed, the user can choose rock, paper, or scissors through image-based buttons on the left side of the screen. The server chooses a randomized response to the user’s input. With counters to keep score, the winner is decided after having won 2/3 rounds of the game, and is declared through a darkened screen, with a printed message that declares whether the user has won or lost. The user is able to restart the game by clicking on a restart button if they win, and their win will be counted to a streak counter. If they lose or press on the home screen button, then the streak counter is reset. 
+
 Description: The objective of our project is to successfully develop a rock paper scissors game. When completed, the user should be able to access a home screen with a start button and instructions on how to play the game. When start is pressed, the user can choose rock, paper, or scissors through image-based buttons on the left side of the screen. The server chooses a randomized response to the user’s input. With counters to keep score, the winner is decided after having won 2/3 rounds of the game, and is declared through a darkened screen, with a printed message that declares whether the user has won or lost.  The user is able to restart the game by clicking on a restart button, or be able to access the home screen by pressing start. 
 
 1. The game shall have a home screen that has a start button and an explanation on how to play rock paper scissors above the start button.  
