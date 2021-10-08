@@ -1,7 +1,10 @@
 # rpsProject
 Team Name: Full-Stack Senders
+
 Section: B
+
 Lab: 3
+
 Group Member Names and Emails: 
 - Harsh Kuddu - harshk10@my.yorku.ca
 - Saieda Muntaha Begum - muntahab@my.yorku.ca 
