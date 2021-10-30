@@ -32,6 +32,6 @@ Project Requirements:
 10.	When the homescreen button is pressed, then the user(s) is lead to the homescreen
 11.	When the new game button is chosen, then then the game loops from the first round again with the added points from the streak counter
 12.	There is a streak counter throughout the game, which counts how many 3-round games that the user has won
-13.	If the user wins a three round game, then one is added to this streak counter.
+13.	If the user wins a three-round game, then one is added to this streak counter.
 14.	The user has an option every time they win the game whether or not to continue on with their streak with a continue button, or to restart the game and lose their streak. This means that they will have 2 options to either go back to the homescreen or to continue adding points to their streak counter.
 
