@@ -24,11 +24,11 @@ Project Requirements:
 6.	In multiplayer mode, the computer will make a decision, and the user will be moved to a screen that announces who won the round
 7.	In single player mode, the process will repeat until the player or the computer wins two rounds of the game, and the winner is announced after three rounds, adding a point to the winner’s counter and with a message announcing the winner
 8.	In multiplayer mode, the process will repeat until the player or the second player wins two rounds of the game, and the winner is announced after three rounds, adding a point to the winner’s counter and with a message announcing the winner 
-9.	In single player mode, the users will then decide whether they would like to play a new game to continue their streak (if they earned one), or to return to the homescreen 
-10.	In multiplayer mode, If the user wins, then they will be led to a screen declaring “You win!”, with an option to restart the game or continue to another game to keep their streak
+9.	In single player mode, the users will then decide whether they would like to play a new game to continue their streak or to return to the homescreen 
+10.	In multiplayer mode, the user will then decide whether they would like to play a new game to continue their streak or return to the homescreen
 11.	When the homescreen button is pressed, then the user(s) is lead to the homescreen
 12.	When the new game button is chosen, then then the game loops from the first round again with the added points from the streak counter
 13.	There is a streak counter throughout the game, which counts how many 3-round games that the user has won
 14.	If the user wins a three round game, then one is added to this streak counter.
-15.	The user has an option every time they win the game whether or not to continue on with their streak with a continue button, or to restart the game and lose their streak. This means that they will have 2 options to either go back to the homescreen or to continue adding points to their streak counter.
+15.	The user has an option every time they win the game whether or not to continue on with their streak with a continue button, or to return to the homescreen and lose their streak. This means that they will have 2 options to either go back to the homescreen or to continue adding points to their streak counter.
 
