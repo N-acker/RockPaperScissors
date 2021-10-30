@@ -9,7 +9,9 @@ Lab: 3
 Group Member Names and Emails:
 
 •	Harsh Kuddu - harshk10@my.yorku.ca
+
 •	Saieda Muntaha Begum - muntahab@my.yorku.ca
+
 •	Nathaniel Acker - nacker@my.yorku.ca
 
 Project Title: Rock Paper Scissors (rps)
