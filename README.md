@@ -20,7 +20,7 @@ Description: The objective of our project is to successfully develop a rock pape
 
 Project Requirements:
 
-1.	The game shall have a home screen that includes single and multiplayer buttons, as well as instructions on how to play the game. 
+1.	The game shall have a home screen that includes single and multiplayer buttons, as well as instructions on how to play the game
 2.	Once either game button is pressed, the user(s) will be led to the game
 3.	There will be three image buttons for the game: rock, paper and scissors on the left side of the screen
 4.	The user will be able to select one of these buttons in order to input their decision
@@ -33,5 +33,5 @@ Project Requirements:
 11.	When the new game button is chosen, then then the game loops from the first round again with the added points from the streak counter
 12.	There is a streak counter throughout the game, which counts how many 3-round games that the user has won
 13.	If the user wins a three-round game, then one is added to this streak counter.
-14.	The user has an option every time they win the game whether to continue with their streak with a continue button, or to restart the game and lose their streak. 
-15.	This means that the user will have 2 options: to either go back to the homescreen or to continue adding points to their streak counter.
+14.	The user has an option every time they win the game whether to continue with their streak with a continue button, or to restart the game and lose their streak 
+15.	This means that the user will have 2 options: to either go back to the homescreen or to continue adding points to their streak counter
