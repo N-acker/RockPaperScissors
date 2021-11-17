@@ -1,3 +1,8 @@
+* {
+	box-sizing: border-box;
+	background-color:rgb(167, 214, 236);
+	overflow:auto;
+  }
 body {
 	text-align:center;
 	background-color: yellow;
