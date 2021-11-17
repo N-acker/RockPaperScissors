@@ -42,3 +42,18 @@ button:hover {
 	height:60vh;
 }
 
+#flex {
+	display: flex;
+	flex-direction: row;
+}
+
+#picture {
+	border: 3px solid turquoise;
+	width: 50em;
+}
+
+#description {
+	border: 3px solid turquoise;
+	width: 20em;
+}
+
