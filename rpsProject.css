@@ -11,6 +11,7 @@ footer{
 	text-align:center;
 	font-size:10px;
 }
+<<<<<<< HEAD
 
 button{
 	background-color: yellow;
@@ -31,3 +32,10 @@ button:hover {
     border: 10px;
     border: 3px solid yellow;
 }
+=======
+[class*="description"] {
+	width: 100%;
+	display:inline-block;
+	height:60vh;
+}
+>>>>>>> ea1b5166ebb04195c427b1a18cc9194eaeb18797
