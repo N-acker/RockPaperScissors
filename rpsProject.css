@@ -6,3 +6,8 @@ footer{
 	text-align:center;
 	font-size:10px;
 }
+[class="description"] {
+	width: 100%;
+	display:inline-block;
+	height:60vh;
+}
