@@ -33,6 +33,7 @@ button{
     font-size: 15px;
     border-radius: 10%;
     font-weight: 700;
+	margin-top: 100px;
 	
 }
 
@@ -62,16 +63,22 @@ button:hover {
 
 #description {
 	border: 3px solid turquoise;
-	width: 20em;
+	width: 15em;
+	height: 20em;
+	text-align: center;
 }
 
 nav{
 display: flex;	
-flex-direction: column;
 }
 
 #buttons {
 	display: flex;
 	justify-content: center;
+	
 }
+
+
+
+
 
