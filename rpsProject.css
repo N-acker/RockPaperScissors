@@ -52,6 +52,7 @@ button:hover {
 #flex {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 #picture {
@@ -62,5 +63,15 @@ button:hover {
 #description {
 	border: 3px solid turquoise;
 	width: 20em;
+}
+
+nav{
+display: flex;	
+flex-direction: column;
+}
+
+#buttons {
+	display: flex;
+	justify-content: center;
 }
 
