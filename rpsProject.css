@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	background-color:rgb(167, 214, 236);
+	background-color: rgb(248, 248, 142);
 	overflow:auto;
   }
 body {
@@ -25,7 +25,6 @@ footer{
 
 button{
 	background-color: rgb(248, 248, 142);
-	background-color: yellow;
 	color: turquoise;
 	border: 10px;
 	border: 3px solid turquoise;
