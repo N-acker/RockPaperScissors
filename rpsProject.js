@@ -1,7 +1,6 @@
 function mainscreen(){
     document.getElementById("picture").setAttribute("src","images/homescreen_image/rps_homescreen.jpg");
     document.getElementById("picture").style.display="none";
-
 }
 
 
