@@ -1,22 +1,4 @@
 # rpsProject
-<<<<<<< HEAD
-1. The user will be able to view visual icons for rock, paper and scissors, with the same three icons on both the left and the right of the screen
-2. The user will be prompted to press on either rock, paper, or scissors on the left side of the screen
-3. Once the user makes a decision and presses a button, the computer will make press an icon on the right side of the screen
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-=======
-
 Team Name: Full-Stack Senders
 
 Section: B
@@ -52,4 +34,3 @@ Project Requirements:
 13.	If the user wins a three-round game, then one is added to this streak counter.
 14.	The user has an option every time they win the game whether to continue with their streak with a continue button, or to restart the game and lose their streak 
 15.	This means that the user will have 2 options: to either go back to the homescreen or to continue adding points to their streak counter
->>>>>>> 25fe36907037a64dd3bab7d62b6adf58d9e67cbb
