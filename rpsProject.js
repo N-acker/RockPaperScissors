@@ -9,23 +9,12 @@ function mainscreen(){
     var flexDiv=document.createElement("div");
     $(flexDiv).attr("id","flex");
     var newPic=document.createElement("img");
-<<<<<<< HEAD
-    var picDiv=document.createElement("img");
-=======
-    var picDiv=document.createElement("div");
->>>>>>> ae64372cde4095ff72aa0dd9c385ca35fac1077c
-    $(picDiv).attr("id","picture");
+    $(newPic).attr("id","picture");
     $(newPic).attr("src","images/homescreen_image/rps_homescreen.jpg");
-    $(picDiv).append(newPic);
-
     $(flexDiv).append(newPic);
     var discrition=document.createElement("p");
     $(discrition).html("Rock paper scissors is a well known game which is quick and easy to play. To start our virtual rendition of the game, either choose single player mode or multiplayer mode. From here, you will be prompted to make a choice of rock, paper or scissors. Make your choice, and have fun!")
-<<<<<<< HEAD
-    var dDiscript = document.createElement("div");
-=======
     var dDiscript=document.createElement("div");
->>>>>>> ae64372cde4095ff72aa0dd9c385ca35fac1077c
     $(dDiscript).attr("id","description");
     $(dDiscript).append(discrition);
     $(flexDiv).append(dDiscript);
