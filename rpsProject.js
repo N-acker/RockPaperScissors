@@ -9,7 +9,7 @@ function mainscreen(){
     var flexDiv=document.createElement("div");
     $(flexDiv).attr("id","flex");
     var newPic=docment.createElement("img");
-    var picDiv=docment.createElement("img");
+    var picDiv=docment.createElement("div");
     $(picDiv).attr("id","picture");
     $(newPic).attr("src","images/homescreen_image/rps_homescreen.jpg");
     $(picDiv).append(newPic);
