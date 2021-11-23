@@ -17,8 +17,6 @@ function mainscreen(){
     var discrition=document.createElement("p");
     $(discrition).html("Rock paper scissors is a well known game which is quick and easy to play. To start our virtual rendition of the game, either choose single player mode or multiplayer mode. From here, you will be prompted to make a choice of rock, paper or scissors. Make your choice, and have fun!")
     var dDiscript=document.createElement("div");
-    var dDiscript = document.createElement("div");
-    var dDiscript=document.createElement("div");
 
     $(dDiscript).attr("id","description");
     $(dDiscript).append(discrition);
