@@ -38,12 +38,14 @@ function mainscreen(){
     
      $("#buttons").append(buttonNav);
     
-    
   
 }
 
 
 function singlePlayer(){
+    var singleDev = document.createElement("div");
+    
+
 
     
 }
