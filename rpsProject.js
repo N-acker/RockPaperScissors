@@ -29,7 +29,7 @@ function mainscreen(){
     var button1=document.createElement("button");
     var button2=document.createElement("button");
     $(button1).html("SinglePlayer");
-    $(button1).html("MultiPlayer");
+    $(button2).html("MultiPlayer");
     $(button1).click(singlePlayer);
     $(button2).click(multiPlayer);
     var buttonNav=document.createElement("nav");
