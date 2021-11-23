@@ -59,22 +59,7 @@ button:hover {
 	border: 3px solid turquoise;
 	width: 50vw;
 	height: 60vh;
-<<<<<<< HEAD
-	width: 50vw;
-	height:60vh;
-
-=======
-	width: 800px;
-	height:500px;
->>>>>>> d6378588a1222906ee927ec729995cae74e99985
 }
-img {
-	text-align: center;
-	width: 450px;
-	height: 450px;
-	margin-top:5px;
-	padding: 2px;
-  }
 
 #description {
 	border: 3px solid turquoise;
