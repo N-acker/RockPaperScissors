@@ -5,7 +5,6 @@
   }
 body {
 	text-align:center;
-	background-color: yellow;
 	font-family:Luminary, cursive;
 	color: turquoise;
 }
@@ -60,13 +59,10 @@ button:hover {
 
 #picture {
 	border: 3px solid turquoise;
-<<<<<<< HEAD
 	width: 50vw;
 	height: 60vh;
-=======
-	width: 800px;
-	height:500px;
->>>>>>> 53d9231cd859fc569d40b05a56889152863c47b9
+	width: 50vw;
+	height:60vh;
 
 }
 
