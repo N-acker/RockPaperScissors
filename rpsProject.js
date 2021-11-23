@@ -25,16 +25,18 @@ function mainscreen(){
     $(flexDiv).append(dDiscript);
     $("#mainscreen").append(flexDiv);
     
-    var buttonDiv=document.createElement("div");
-    $(buttonDiv).attr("id","buttons");
+   
     var button1=document.createElement("button");
     var button2=document.createElement("button");
+    $(button1).html("SinglePlayer");
+    $(button2).html("MultiPlayer");
     $(button1).click(singlePlayer);
     $(button2).click(multiPlayer);
     var buttonNav=document.createElement("nav");
      $(buttonNav).append(button1);
      $(buttonNav).append(button2);
-     $(buttonDiv).append(buttonNav);
+    
+     $("#buttons").append(buttonNav);
     
     
   
