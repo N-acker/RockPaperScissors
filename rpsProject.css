@@ -71,6 +71,13 @@ button:hover {
 	height: 20em;
 	text-align: center;
 }
+img {
+	display: flex;
+	width: 30%;
+	height: 30%;
+	margin-top:5px;
+	padding: 2px;
+  }
 
 nav{
 display: flex;	
