@@ -50,14 +50,18 @@ function singlePlayer(){
     var rockButton = document.createElement("button");
     var paperButton = document.createElement("button");
     var scissorsButton = document.createElement("button");
-    $(rockButton).click(rock);
-    $(paperButton).click(paper);
-    $(scissorsButton).click(scissors);
 
-    var buttonNav = document.createElement("nav");
-     $(buttonNav).append(rockButton);
-     $(buttonNav).append(paperButton);
-     $(buttonNav).append(scissorsButton);
+    $(rockButton).html("rock");
+    $(paperButton).html("paper");
+    $(scissorsButton).html("scissors");
+    $(rockButton).click();
+    $(paperButton).click();
+    $(scissorsButton).click();
+
+    var rpsButtonNav = document.createElement("nav");
+     $(rpsButtonNav).append(rockButton);
+     $(rpsButtonNav).append(paperButton);
+     $(rpsButtonNav).append(scissorsButton);
     
      $("#buttons").append(buttonNav);
     
