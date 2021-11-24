@@ -47,13 +47,15 @@ function singlePlayer(){
     $("#buttons").empty();
 
 
-    var rockButton = document.createElement("button");
-    var paperButton = document.createElement("button");
-    var scissorsButton = document.createElement("button");
+    var rockButton = document.createElement("rButton");
+    var paperButton = document.createElement("pButton");
+    var scissorsButton = document.createElement("sButton");
 
-    $(rockButton).html("rock");
-    $(paperButton).html("paper");
-    $(scissorsButton).html("scissors");
+    $("rButton").append("src","images/rps_icons/rps_rock.png").button();
+    $("pButton").append("src","images/rps_icons/rps_paper.png").button();
+    $("sButton").append("src","images/rps_icons/rps_scissors.png").button();
+
+ 
     $(rockButton).click();
     $(paperButton).click();
     $(scissorsButton).click();
