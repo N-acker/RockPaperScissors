@@ -51,10 +51,9 @@ function singlePlayer(){
     var rockButton = document.createElement("img");
     var paperButton = document.createElement("img");
     var scissorsButton = document.createElement("img");
-    $(rockButton).attr("src","");
+    $(rockButton).attr("src","images/rps_icons/rps_rock.png");
     $(rockButton).click(rock);
     
-
 
     var rpsButtonNav = document.createElement("nav");
      $(rpsButtonNav).append(rockButton);
