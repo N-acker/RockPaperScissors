@@ -42,23 +42,19 @@ function mainscreen(){
 
 
 function singlePlayer(){
+    var choice=0;
     var singleDev = document.createElement("div");
     $("#mainscreen").empty();
     $("#buttons").empty();
+    
+    
+    var rockButton = document.createElement("img");
+    var paperButton = document.createElement("img");
+    var scissorsButton = document.createElement("img");
+    $(rockButton).attr("src","");
+    $(rockButton).click(rock);
+    
 
-
-    var rockButton = document.createElement("rButton");
-    var paperButton = document.createElement("pButton");
-    var scissorsButton = document.createElement("sButton");
-
-    $("rButton").append("src","images/rps_icons/rps_rock.png").button();
-    $("pButton").append("src","images/rps_icons/rps_paper.png").button();
-    $("sButton").append("src","images/rps_icons/rps_scissors.png").button();
-
- 
-    $(rockButton).click();
-    $(paperButton).click();
-    $(scissorsButton).click();
 
     var rpsButtonNav = document.createElement("nav");
      $(rpsButtonNav).append(rockButton);
@@ -66,6 +62,11 @@ function singlePlayer(){
      $(rpsButtonNav).append(scissorsButton);
     
      $("#singleChoice").append(rpsButtonNav);
+    
+}
+
+function rock{
+ var choice=1   
     
 }
 
