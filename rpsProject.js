@@ -66,7 +66,8 @@ function singlePlayer(){
 }
 
 function rock{
- var choice=1   
+ var choice=1
+ alert("1")
     
 }
 
