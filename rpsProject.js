@@ -47,6 +47,19 @@ function singlePlayer(){
     $("#buttons").empty();
 
 
+    var rockButton = document.createElement("button");
+    var paperButton = document.createElement("button");
+    var scissorsButton = document.createElement("button");
+    $(rockButton).click(rock);
+    $(paperButton).click(paper);
+    $(scissorsButton).click(scissors);
+
+    var buttonNav = document.createElement("nav");
+     $(buttonNav).append(rockButton);
+     $(buttonNav).append(paperButton);
+     $(buttonNav).append(scissorsButton);
+    
+     $("#buttons").append(buttonNav);
     
 }
 
@@ -54,6 +67,8 @@ function multiPlayer(){
     var multiDev = document.createElement("div");
     $("#mainscreen").empty();
     $("#buttons").empty();
+    
+
     
 }
 
