@@ -43,7 +43,8 @@ function mainscreen(){
 
 function singlePlayer(){
     var singleDev = document.createElement("div");
-    
+    $("#mainscreen").empty();
+    $("#buttons").empty();
 
 
     
