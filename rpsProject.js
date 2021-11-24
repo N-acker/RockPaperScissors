@@ -52,7 +52,9 @@ function singlePlayer(){
 
 
 function multiPlayer(){
-
+    var multiDev = document.createElement("div");
+    $("#mainscreen").empty();
+    $("#buttons").empty();
     
 }
 function computerPlay(){
