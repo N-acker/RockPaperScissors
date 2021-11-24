@@ -55,7 +55,6 @@ function singlePlayer(){
     $(rockButton).click(rock);
     
 
-
     var rpsButtonNav = document.createElement("nav");
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
