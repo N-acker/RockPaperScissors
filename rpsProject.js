@@ -63,7 +63,7 @@ function singlePlayer(){
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
     
-     $("#buttons").append(rpsButtonNav);
+     $("#singleChoice").append(rpsButtonNav);
     
 }
 
