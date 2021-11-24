@@ -12,7 +12,7 @@ function mainscreen(){
     // var picDiv=document.createElement("img");
     var picDiv=document.createElement("div");
     $(picDiv).attr("id","picture");
-    $(newPic).attr("src","images/homescreen_image/rps_home.jpg");
+    $(newPic).attr("src","images/homescreen_image/rps_homescreen.jpg");
     $(picDiv).append(newPic);
     $(flexDiv).append(picDiv);
     var discrition=document.createElement("p");
@@ -50,13 +50,13 @@ function singlePlayer(){
     
 }
 
-
 function multiPlayer(){
     var multiDev = document.createElement("div");
     $("#mainscreen").empty();
     $("#buttons").empty();
     
 }
+
 function computerPlay(){
     //Gets number 0-2
     //0 representing rock
