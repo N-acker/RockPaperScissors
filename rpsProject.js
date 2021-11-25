@@ -53,6 +53,10 @@ function singlePlayer(){
     var scissorsButton = document.createElement("img");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
     $(rockButton).click(rock);
+    $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
+    $(scissorsButton).click(scissors);
+    $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
+    $(paperButton).click(paper);
     
 
     var rpsButtonNav = document.createElement("nav");
@@ -69,6 +73,18 @@ function rock(){
  alert("1")
     
 }
+
+function paper(){
+    var choice=2
+    alert("2")
+}
+
+function scissors(){
+    var choice=3
+    alert("3")
+}
+
+
 
 function multiPlayer(){
     var multiDev = document.createElement("div");
