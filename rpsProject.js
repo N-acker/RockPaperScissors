@@ -49,8 +49,11 @@ function singlePlayer(){
     
     
     var rockButton = document.createElement("img");
+    $(rockButton).attr("id","rockButton");
     var paperButton = document.createElement("img");
+    $(paperButton).attr("id","paperButton");
     var scissorsButton = document.createElement("img");
+    $(scissorsButton).attr("id","scissorsButton");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
     $(rockButton).click(rock);
     $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
@@ -60,36 +63,19 @@ function singlePlayer(){
     
 
     var rpsButtonNav = document.createElement("nav");
-    $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
     
      $("#singleChoice").append(rpsButtonNav);
 
+     var counterOne = document.getElementById("counterOne");
+     var counterTwo = document.getElementById("counterTwo");
 
-
-     var counterPlayer = document.getElementById("counterPlayer");
-     var counterComp = document.getElementById("counterComp");
-
-     var counterPlayer = 0;
-     var counterComp = 0;
-
-     function inputNum() {
-        var numInput = document.getElementsByName("buttonChoice");
-        for (var i = 0; i < numInput.length; i++) {
-            if (numInput[i].checked) {
-            return numInput[i].value;
-            }
-          }
-        }
-
-     function keepScore(){
-        var choice = ["Rock", "Paper", "Scissors"];
-        var guessComp =  Selection[Math.floor(Math.random() * 3)];
-        var guessPlayer = inputNum();
-     }
- 
+     var counterOne = 0;
+     var counterTwo = 0;
+     
+    
 }
 
 function rock(){
