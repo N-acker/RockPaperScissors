@@ -78,7 +78,17 @@ function singlePlayer(){
     
 }
 function roundWinner(){
-   
+   comPick=computerPlay();
+    playerPick="";
+    if (dcument.getElementbyId("paperButton").clicked==true){
+        playerPick="paper";
+    }else if(document.getElementbyId("rockButton").clicked==true){
+         playerPick="rock"
+    }else if(document.getElementbyId("scissorsButton").clicked==true){
+          playerPick=scissors"
+    }
+    
+                        
     
 }
 
@@ -93,7 +103,7 @@ function multiPlayer(){
 }
 
 function computerPlay(){
-    computerChoice=["rock","paper","sicissors"];
+    computerChoice=["rock","paper","scissors"]
     computerMove=computerChoice[Math.round(Math.random()*2)];
     return computerMove;
     
