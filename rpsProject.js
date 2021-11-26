@@ -99,6 +99,7 @@ function roundWinner(){
     }else{
      //computer wins
         i=0;
+        j=0;
     }
                         
     
