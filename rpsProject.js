@@ -92,11 +92,13 @@ function roundWinner(){
           playerPick="scissors"
     }
     if(playerPick==comPick){
-        //tie 
+        i=0
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick="paper"){
-        //player wins  
+        //player wins 
+        i=0; 
     }else{
      //computer wins
+        i=0;
     }
                         
     
