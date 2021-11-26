@@ -80,14 +80,20 @@ function singlePlayer(){
 function roundWinner(){
    comPick=computerPlay();
     playerPick="";
-    if (dcument.getElementbyId("paperButton").clicked==true){
+    if (document.getElementbyId("paperButton").clicked==true){
         playerPick="paper";
     }else if(document.getElementbyId("rockButton").clicked==true){
          playerPick="rock"
     }else if(document.getElementbyId("scissorsButton").clicked==true){
           playerPick="scissors"
     }
-    
+    if(playerPick==comPick){
+        //tie 
+    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick="paper"){
+        //player wins  
+    }else{
+     //computer wins
+    }
                         
     
 }
