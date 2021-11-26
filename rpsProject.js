@@ -49,64 +49,30 @@ function singlePlayer(){
     
     
     var rockButton = document.createElement("img");
+    $(rockButton).attr("id","rockButton");
     var paperButton = document.createElement("img");
+    $(paperButton).attr("id","paperButton");
     var scissorsButton = document.createElement("img");
+    $(scissorsButton).attr("id","scissorsButton");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
-    $(rockButton).click(rock);
+    $(rockButton).click(roundWinner);
     $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
-    $(scissorsButton).click(scissors);
+    $(scissorsButton).click(roundWinner);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
-    $(paperButton).click(paper);
+    $(paperButton).click(roundWinner);
     
 
     var rpsButtonNav = document.createElement("nav");
-    $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
     
      $("#singleChoice").append(rpsButtonNav);
-
-
-     var counterPlayer = document.getElementById("counterPlayer");
-     var counterComp = document.getElementById("counterComp");
-
-     var counterPlayer = 0;
-     var counterComp = 0;
-
-     function inputNum() {
-        var numInput = document.getElementsByName("buttonChoice");
-        for (var i = 0; i < numInput.length; i++) {
-            if (numInput[i].checked) {
-            return numInput[i].value;
-            }
-          }
-        }
-
-     function keepScore(){
-        var choice = ["Rock", "Paper", "Scissors"];
-        var guessComp =  Selection[Math.floor(Math.random() * 3)];
-        var guessPlayer = inputNum();
-     }
- 
 }
-
-function rock(){
- var choice=1
- alert("1")
+function roundWinner(){
+   
     
 }
-
-function paper(){
-    var choice=2
-    alert("2")
-}
-
-function scissors(){
-    var choice=3
-    alert("3")
-}
-
 
 
 function multiPlayer(){
@@ -119,10 +85,9 @@ function multiPlayer(){
 }
 
 function computerPlay(){
-    //Gets number 0-2
-    //0 representing rock
-    //1 representing paper
-    //2 repersenting siscors
-    var computerMove=Math.round(Math.random()*2)
+    computerChoice=["rock","paper","sicissors"];
+    computerMove=computerChoice[Math.round(Math.random()*2)];
+    return computerMove;
+    
 
 }
