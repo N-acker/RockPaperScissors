@@ -66,13 +66,52 @@ function singlePlayer(){
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
+
+    var navContainer = document.createElement("div")
+    $(navContainer).append(rpsButtonNav);
+
     
      $("#singleChoice").append(rpsButtonNav);
+     $("#singleChoice").append(navContainer);
+
+     var counterOne = document.getElementById("counterOne");
+     var counterTwo = document.getElementById("counterTwo");
+
+     var counterOne = 0;
+     var counterTwo = 0;
+     
+    
 }
 function roundWinner(){
+   comPick=computerPlay();
+    playerPick="";
+    if (document.getElementbyId("paperButton").clicked==true){
+        playerPick="paper";
+    }else if(document.getElementbyId("rockButton").clicked==true){
+         playerPick="rock"
+    }else if(document.getElementbyId("scissorsButton").clicked==true){
+          playerPick="scissors"
+    }
+    if(playerPick==comPick){
+        i=0
+    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+        //player wins 
+        i=0; 
+    }else{
+     //computer wins
+        i=0;
+        j=0;
+    }
+                        
+    
+}
+
+function gameWinner(){
    
     
 }
+
+
 
 
 function multiPlayer(){
@@ -85,7 +124,7 @@ function multiPlayer(){
 }
 
 function computerPlay(){
-    computerChoice=["rock","paper","sicissors"];
+    computerChoice=["rock","paper","scissors"]
     computerMove=computerChoice[Math.round(Math.random()*2)];
     return computerMove;
     
