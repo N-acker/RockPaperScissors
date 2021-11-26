@@ -12,7 +12,7 @@ function mainscreen(){
     // var picDiv=document.createElement("img");
     var picDiv=document.createElement("div");
     $(picDiv).attr("id","picture");
-    $(newPic).attr("src","images/homescreen_image/rps_homescreen.jpg");
+    $(newPic).attr("src","images/homescreen_image/rps_home.jpg");
     $(picDiv).append(newPic);
     $(flexDiv).append(picDiv);
     var discrition=document.createElement("p");
@@ -66,6 +66,13 @@ function singlePlayer(){
      $(rpsButtonNav).append(scissorsButton);
     
      $("#singleChoice").append(rpsButtonNav);
+
+     var counterOne = document.getElementById("counterOne");
+     var counterTwo = document.getElementById("counterTwo");
+
+     var counterOne = 0;
+     var counterTwo = 0;
+     
     
 }
 
