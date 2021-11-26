@@ -93,7 +93,7 @@ function roundWinner(){
     }
     if(playerPick==comPick){
         i=0
-    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick="paper"){
+    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
         //player wins 
         i=0; 
     }else{
