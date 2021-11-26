@@ -72,6 +72,7 @@ function singlePlayer(){
     $(navContainer).append(rpsButtonNav);
 
     
+     $("#singleChoice").append(rpsButtonNav);
      $("#singleChoice").append(navContainer);
 
      var counterOne = document.getElementById("counterOne");
