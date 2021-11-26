@@ -64,8 +64,12 @@ function singlePlayer(){
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
+
+    var navContainer = document.createElement("div")
+    $(navContainer).append(rpsButtonNav);
+
     
-     $("#singleChoice").append(rpsButtonNav);
+     $("#singleChoice").append(navContainer);
 
      var counterOne = document.getElementById("counterOne");
      var counterTwo = document.getElementById("counterTwo");
