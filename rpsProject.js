@@ -65,6 +65,13 @@ function singlePlayer(){
      $(rpsButtonNav).append(scissorsButton);
     
      $("#singleChoice").append(rpsButtonNav);
+
+     var counterOne = document.getElementById("counterOne");
+     var counterTwo = document.getElementById("counterTwo");
+
+     var counterOne = 0;
+     var counterTwo = 0;
+     
     
 }
 
