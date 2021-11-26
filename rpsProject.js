@@ -49,18 +49,20 @@ function singlePlayer(){
     
     
     var rockButton = document.createElement("img");
+    $(rockButton).attr("id","rockButton");
     var paperButton = document.createElement("img");
+    $(paperButton).attr("id","paperButton");
     var scissorsButton = document.createElement("img");
+    $(scissorsButton).attr("id","scissorsButton");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
-    $(rockButton).click(rock);
+    $(rockButton).click(roundWinner);
     $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
-    $(scissorsButton).click(scissors);
+    $(scissorsButton).click(roundWinner);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
-    $(paperButton).click(paper);
+    $(paperButton).click(roundWinner);
     
 
     var rpsButtonNav = document.createElement("nav");
-    $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
@@ -79,23 +81,26 @@ function singlePlayer(){
      
     
 }
-
-function rock(){
- var choice=1
- alert("1")
+function roundWinner(){
+   comPick=computerPlay();
+    playerPick="";
+    if (document.getElementbyId("paperButton").clicked==true){
+        playerPick="paper";
+    }else if(document.getElementbyId("rockButton").clicked==true){
+         playerPick="rock"
+    }else if(document.getElementbyId("scissorsButton").clicked==true){
+          playerPick="scissors"
+    }
+    if(playerPick==comPick){
+        //tie 
+    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick="paper"){
+        //player wins  
+    }else{
+     //computer wins
+    }
+                        
     
 }
-
-function paper(){
-    var choice=2
-    alert("2")
-}
-
-function scissors(){
-    var choice=3
-    alert("3")
-}
-
 
 
 function multiPlayer(){
@@ -108,10 +113,9 @@ function multiPlayer(){
 }
 
 function computerPlay(){
-    //Gets number 0-2
-    //0 representing rock
-    //1 representing paper
-    //2 repersenting siscors
-    var computerMove=Math.round(Math.random()*2)
+    computerChoice=["rock","paper","scissors"]
+    computerMove=computerChoice[Math.round(Math.random()*2)];
+    return computerMove;
+    
 
 }
