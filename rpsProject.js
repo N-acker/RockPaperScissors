@@ -85,7 +85,7 @@ function roundWinner(){
     }else if(document.getElementbyId("rockButton").clicked==true){
          playerPick="rock"
     }else if(document.getElementbyId("scissorsButton").clicked==true){
-          playerPick=scissors"
+          playerPick="scissors"
     }
     
                         
