@@ -84,6 +84,7 @@ function singlePlayer(){
     
 }
 function roundWinner(){
+    $("#singleChoice").empty();
    comPick=computerPlay();
     playerPick="";
     if (document.getElementbyId("paperButton").clicked==true){
@@ -103,10 +104,10 @@ function roundWinner(){
      //computer wins
         compCounter+=1;
         return "computer";
-    }
-                        
-    
+    }   
 }
+
+
 
 function gameWinner(){
    
