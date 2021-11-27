@@ -63,7 +63,8 @@ function singlePlayer(){
     
 
     var rpsButtonNav = document.createElement("nav");
-    $(rpsButtonNav).attr("id", "singlePlayerNav")
+    $(rpsButtonNav).attr("id", "singlePlayerNav");
+    $(rpsButtonNav).attr("id", "divisionLine");
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
