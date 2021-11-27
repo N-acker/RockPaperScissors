@@ -84,20 +84,49 @@ display: flex;
 	
 }
 
-#singlePlayerNav {
+#singleContainer {
 	width: 50%;
 	position: absolute;
 	top: 30%;
+	border-right: 6px solid turquoise;
+	height: 100vh;
+
 }
 
-#divisionLine {
+#singleInner {
+
+	position: relative;
+}
+
+
+/* #singleInner {
 	border-left: 6px solid turquoise;
 	height: 100vh;
 	position: absolute;
 	left: 50%;
 	margin-left: -3px;
 	top: 0;
-  }
+
+
+  } */
+
+/* #singleContainer {
+
+	border-right: 6px solid turquoise;
+	height: 100%;
+	position: absolute;
+} */
+
+
+
+#singleTitle {
+
+	display: flex;
+	padding-left: 15%;
+
+}
+
+  
 
   
 

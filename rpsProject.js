@@ -6,6 +6,12 @@ window.onload=function()
 }    
 
 function mainscreen(){
+
+    var title=document.createElement("h1");
+    $(title).html("Rock Paper Scissors")
+    $(title).attr("id", "mainTitle")
+    $("header").append(title)
+
     var flexDiv=document.createElement("div");
     $(flexDiv).attr("id","flex");
     var newPic=document.createElement("img");
@@ -46,7 +52,12 @@ function singlePlayer(){
     var singleDev = document.createElement("div");
     $("#mainscreen").empty();
     $("#buttons").empty();
-    
+    $("header").empty();
+
+    var single=document.createElement("h1");
+    $(single).attr("id", "singleTitle")
+    $(single).html("Player One Screen");
+    $(header).append(single);
     
     var rockButton = document.createElement("img");
     $(rockButton).attr("id","rockButton");
@@ -68,12 +79,14 @@ function singlePlayer(){
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
 
-    var navContainer = document.createElement("div")
-    $(navContainer).append(rpsButtonNav);
 
-    
-     $("#singleChoice").append(rpsButtonNav);
-     $("#singleChoice").append(navContainer);
+    var innerContainer = document.createElement("div");
+    $(innerContainer).attr("id", "singleInner");
+    var navContainer = document.createElement("div");
+    $(navContainer).attr("id", "singleContainer");
+    $(innerContainer).append(rpsButtonNav)
+    $(navContainer).append(innerContainer);
+    $(singleChoice).append(navContainer);
 
      var playerCounter = document.getElementById("playerCounter");
      var compCounter = document.getElementById("compCounter");
