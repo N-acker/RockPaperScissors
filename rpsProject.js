@@ -83,6 +83,7 @@ function singlePlayer(){
      
     
 }
+
 function roundWinner(){
     $("#singleChoice").empty();
    comPick=computerPlay();
