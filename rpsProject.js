@@ -75,11 +75,11 @@ function singlePlayer(){
      $("#singleChoice").append(rpsButtonNav);
      $("#singleChoice").append(navContainer);
 
-     var counterOne = document.getElementById("counterOne");
-     var counterTwo = document.getElementById("counterTwo");
+     var playerCounter = document.getElementById("counterOne");
+     var compCounter = document.getElementById("counterTwo");
 
-     var counterOne = 0;
-     var counterTwo = 0;
+     var playerCounter = 0;
+     var compCounter = 0;
      
     
 }
@@ -97,11 +97,11 @@ function roundWinner(){
         return "tie";
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
         //player wins 
-        counterOne+=1;
+        playerCounter+=1;
         return "player";
     }else{
      //computer wins
-        counterTwo+=1;
+        compCounter+=1;
         return "computer";
       
     }
