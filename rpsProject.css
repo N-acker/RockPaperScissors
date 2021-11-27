@@ -90,7 +90,14 @@ display: flex;
 	top: 30%;
 }
 
-
+divLine {
+	border-left: 6px solid rbg turquoise;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 0;
+  }
 
 
 

@@ -103,7 +103,6 @@ function roundWinner(){
      //computer wins
         compCounter+=1;
         return "computer";
-      
     }
                         
     
