@@ -90,7 +90,7 @@ display: flex;
 	top: 30%;
 }
 
-.divisionLine {
+#divisionLine {
 	border-left: 6px solid turquoise;
 	height: 100vh;
 	position: absolute;
@@ -99,6 +99,7 @@ display: flex;
 	top: 0;
   }
 
+  
 
 
 
