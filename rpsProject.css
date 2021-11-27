@@ -91,7 +91,7 @@ display: flex;
 }
 
 .divisionLine {
-	border-left: 6px solid rbg turquoise;
+	border-left: 6px solid turquoise;
 	height: 100vh;
 	position: absolute;
 	left: 50%;
