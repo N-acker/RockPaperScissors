@@ -128,7 +128,7 @@ function multiPlayer(){
 
 function computerPlay(){
     computerChoice=["rock","paper","scissors"]
-    computerMove=computerChoice[Math.round(Math.random()*3)];
+    computerMove=computerChoice[Math.round(Math.random()*3)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
     return computerMove;
     
 
