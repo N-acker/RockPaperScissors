@@ -92,7 +92,7 @@ display: flex;
 
 .divisionLine {
 	border-left: 6px solid rbg turquoise;
-	height: 500px;
+	height: 100vh;
 	position: absolute;
 	left: 50%;
 	margin-left: -3px;
