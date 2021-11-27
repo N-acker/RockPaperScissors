@@ -128,7 +128,7 @@ function multiPlayer(){
 
 function computerPlay(){
     computerChoice=["rock","paper","scissors"]
-    computerMove=computerChoice[Math.round(Math.random()*2)];
+    computerMove=computerChoice[Math.round(Math.random()*3)];
     return computerMove;
     
 
