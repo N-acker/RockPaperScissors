@@ -75,8 +75,8 @@ function singlePlayer(){
      $("#singleChoice").append(rpsButtonNav);
      $("#singleChoice").append(navContainer);
 
-     var playerCounter = document.getElementById("counterOne");
-     var compCounter = document.getElementById("counterTwo");
+     var playerCounter = document.getElementById("playerCounter");
+     var compCounter = document.getElementById("compCounter");
 
      var playerCounter = 0;
      var compCounter = 0;
