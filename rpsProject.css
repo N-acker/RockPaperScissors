@@ -126,6 +126,14 @@ display: flex;
 
 }
 
+#multiTitle {
+
+	display: flex;
+	justify-content: space-evenly;
+	
+
+}
+
   
 
   

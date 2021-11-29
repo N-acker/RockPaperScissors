@@ -52,7 +52,7 @@ function singlePlayer(){
     var singleDev = document.createElement("div");
     $("#mainscreen").empty();
     $("#buttons").empty();
-    $("header").empty();
+    $("#header").empty();
 
     var single=document.createElement("h1");
     $(single).attr("id", "singleTitle")
@@ -135,7 +135,21 @@ function multiPlayer(){
     var multiDev = document.createElement("div");
     $("#mainscreen").empty();
     $("#buttons").empty();
+    $("#header").empty();
     
+    var multiP=document.createElement("h1");
+    $(multiP).attr("id", "multiTitle")
+    $(header).append(multiP);
+    
+    var p1=document.createElement("span");
+    $(p1).attr("id", "player1")
+    $(p1).html("Player One");
+    $(multiP).append(p1);
+
+    var p2=document.createElement("span");
+    $(p2).attr("id", "player2")
+    $(p2).html("Player Two");
+    $(multiP).append(p2);
 
     
 }
