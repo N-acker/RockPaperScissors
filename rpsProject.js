@@ -15,6 +15,7 @@ function mainscreen(){
     var flexDiv=document.createElement("div");
     $(flexDiv).attr("id","flex");
     var newPic=document.createElement("img");
+    $(newPic).attr("id","mainImage" )
     // var picDiv=document.createElement("img");
     var picDiv=document.createElement("div");
     $(picDiv).attr("id","picture");
@@ -62,7 +63,7 @@ function singlePlayer(){
 
     var single=document.createElement("h1");
     $(single).attr("id", "singleTitle")
-    $(single).html("Player One Screen");
+    $(single).html("Player Screen");
     $(header).append(single);
     
     var rockButton = document.createElement("img");
@@ -143,17 +144,47 @@ function multiPlayer(){
     
     var multiP=document.createElement("h1");
     $(multiP).attr("id", "multiTitle")
+    $(multiP).html("Player One Screen");
     $(header).append(multiP);
-    
-    var p1=document.createElement("span");
-    $(p1).attr("id", "player1")
-    $(p1).html("Player One");
-    $(multiP).append(p1);
 
-    var p2=document.createElement("span");
-    $(p2).attr("id", "player2")
-    $(p2).html("Player Two");
-    $(multiP).append(p2);
+    var rockButton = document.createElement("img");
+    $(rockButton).attr("id","rockButton");
+    var paperButton = document.createElement("img");
+    $(paperButton).attr("id","paperButton");
+    var scissorsButton = document.createElement("img");
+    $(scissorsButton).attr("id","scissorsButton");
+    $(rockButton).attr("src","images/rps_icons/rps_rock.png");
+    $(rockButton).click(roundWinner);
+    $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
+    $(scissorsButton).click(roundWinner);
+    $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
+    $(paperButton).click(roundWinner);
+    
+
+    var rpsButtonNav = document.createElement("nav");
+    $(rpsButtonNav).attr("id", "singlePlayerNav")
+     $(rpsButtonNav).append(rockButton);
+     $(rpsButtonNav).append(paperButton);
+     $(rpsButtonNav).append(scissorsButton);
+
+
+    var innerContainer = document.createElement("div");
+    $(innerContainer).attr("id", "singleInner");
+    var navContainer = document.createElement("div");
+    $(navContainer).attr("id", "singleContainer");
+    $(innerContainer).append(rpsButtonNav)
+    $(navContainer).append(innerContainer);
+    $(singleChoice).append(navContainer);
+    
+    // var p1=document.createElement("span");
+    // $(p1).attr("id", "player1")
+    // $(p1).html("Player One");
+    // $(multiP).append(p1);
+
+    // var p2=document.createElement("span");
+    // $(p2).attr("id", "player2")
+    // $(p2).html("Player Two");
+    // $(multiP).append(p2);
 
     
 }

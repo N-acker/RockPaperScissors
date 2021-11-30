@@ -60,7 +60,7 @@ button:hover {
 	height: 60vh;
 }
 
-img {
+#mainImage {
 	width: 99%;
 	height: 99%;
 	border: 3px solid turquoise;
@@ -87,15 +87,16 @@ display: flex;
 #singleContainer {
 	width: 50%;
 	position: absolute;
-	top: 30%;
-	border-right: 6px solid turquoise;
-	height: 100vh;
+	/* top: 30%; */
+	border: 6px solid turquoise;
+	height: 80vh;
 
 }
 
 #singleInner {
-
+	top: 30%;
 	position: relative;
+	padding-right: 15%;
 }
 
 
@@ -123,16 +124,21 @@ display: flex;
 
 	display: flex;
 	padding-left: 15%;
+	border: 6px solid turquoise;
+	width: 50%;
+	
 
 }
 
 #multiTitle {
 
-	display: flex;
-	justify-content: space-evenly;
+	border: 6px solid turquoise;
+	width: 50%;
 	
-
 }
+
+
+
 
   
 
