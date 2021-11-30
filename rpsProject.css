@@ -137,6 +137,24 @@ display: flex;
 	
 }
 
+#scissorsButton:hover {
+
+	cursor: pointer;
+
+}
+
+#rockButton:hover {
+
+	cursor: pointer;
+
+}
+
+#paperButton:hover {
+
+	cursor: pointer;
+
+}
+
 
 
 
