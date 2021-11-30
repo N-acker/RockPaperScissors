@@ -99,8 +99,8 @@ function singlePlayer(){
 
 function roundWinner(){
     $("#singleChoice").empty();
-   comPick=computerPlay();
-    playerPick="";
+   comPick = computerPlay();
+    playerPick = "";
     if (document.getElementbyId("paperButton").clicked==true){
         playerPick="paper";
     }else if(document.getElementbyId("rockButton").clicked==true){
