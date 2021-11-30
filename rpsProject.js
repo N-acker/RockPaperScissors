@@ -98,11 +98,12 @@ function singlePlayer(){
 }
 
 function roundWinner(){
-   comPick=computerPlay();
-    playerPick="";
 
     $("#singleChoice").empty();
     $("#header").empty();
+    
+   comPick=computerPlay();
+    playerPick="";
 
     if (document.getElementbyId("paperButton").clicked==true){
         playerPick="paper";
