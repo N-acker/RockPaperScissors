@@ -22,12 +22,12 @@ function mainscreen(){
     $(newPic).attr("src","images/homescreen_image/rps_home.jpg");
     $(picDiv).append(newPic);
     $(flexDiv).append(picDiv);
-    var discrition=document.createElement("p");
-    $(discrition).html("Rock paper scissors is a well known game which is quick and easy to play. To start our virtual rendition of the game, either choose single player mode or multiplayer mode. From here, you will be prompted to make a choice of rock, paper or scissors. Make your choice, and have fun!")
+    var description=document.createElement("p");
+    $(description).html("Rock paper scissors is a well known game which is quick and easy to play. To start our virtual rendition of the game, either choose single player mode or multiplayer mode. From here, you will be prompted to make a choice of rock, paper or scissors. Make your choice, and have fun!")
     var dDiscript=document.createElement("div");
 
     $(dDiscript).attr("id","description");
-    $(dDiscript).append(discrition);
+    $(dDiscript).append(description);
     $(flexDiv).append(dDiscript);
     $("#mainscreen").append(flexDiv);
     
@@ -57,6 +57,7 @@ function singlePlayer(){
     var compCounter = 0;
     var choice=0;
     var singleDev = document.createElement("div");
+
     $("#mainscreen").empty();
     $("#buttons").empty();
     $("#header").empty();
@@ -78,7 +79,8 @@ function singlePlayer(){
     $(scissorsButton).click(roundWinner);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
     $(paperButton).click(roundWinner);
-    
+
+
 
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
@@ -95,13 +97,19 @@ function singlePlayer(){
     $(navContainer).append(innerContainer);
     $(singleChoice).append(navContainer);
      
-    
 }
 
 function roundWinner(){
 
     $("#singleChoice").empty();
     $("#header").empty();
+    
+    /*var innerContainer = document.createElement("div");
+    $(innerContainer).attr("id", "singleInner");
+    var navContainer = document.createElement("div");
+    $(navContainer).attr("id", "singleContainer");
+    $(innerContainer).append(rpsButtonNav)
+    $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
     playerPick="";
