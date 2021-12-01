@@ -147,10 +147,10 @@ function roundWinner(){
 
 function gameWinner(){
    
-    if(compCounter==1){
+    if(compCounter==2){
         alert("You lost, computer won");
         
-    }else if(playerCounter==1){
+    }else if(playerCounter==2){
            alert("You won, computer lost");
     }
 }
