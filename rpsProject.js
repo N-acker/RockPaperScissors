@@ -83,17 +83,21 @@ function singlePlayer(){
        
     function rock(){
         playerPick="rock"
-        
+        roundWinner();
+        gameWinner()
     
     }
 
     function paper(){
         playerPick="paper"
-    
+     roundWinner();
+        gameWinner()
     }
     
     function scissors(){
         playerPick="scissors"
+         roundWinner();
+        gameWinner()
     }
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
