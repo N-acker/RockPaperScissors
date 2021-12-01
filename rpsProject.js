@@ -1,5 +1,5 @@
 var playerPick=""
-var roundCounter=3;
+var roundCounter=2;
 window.onload=function()
 {
     mainscreen();
