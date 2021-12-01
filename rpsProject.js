@@ -159,6 +159,13 @@ function gameWinner(){
     }
 }
 
+function gameCounter(){
+    compCounter == 0;
+    playercounter == 0;
+    
+
+}
+
 
 
 function multiPlayer(){
