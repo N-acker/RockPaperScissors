@@ -146,7 +146,7 @@ function singleScreen(){
     if(winner=="player"){
         alert("You have won");
     }else{
-        alet("COMPUTER HHAS WON");
+        alert("COMPUTER HHAS WON");
     }
 
 }
