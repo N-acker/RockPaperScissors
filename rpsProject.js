@@ -159,6 +159,10 @@ function gameWinner(){
            alert("You won, computer lost");
             playerCounter=0;
         compCounter=0;
+    }else if(playerCounter==1 && compCounter==1){
+        alert("its a tie")
+        compCounter=0;
+        playerCounter=0;
     }
 }
 
