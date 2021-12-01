@@ -1,4 +1,4 @@
-
+var playerPick=""
 window.onload=function()
 {
     mainscreen();
@@ -75,14 +75,26 @@ function singlePlayer(){
     var scissorsButton = document.createElement("img");
     $(scissorsButton).attr("id","scissorsButton");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
-    $(rockButton).click(roundWinner);
+    $(rockButton).click(rock);
     $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
-    $(scissorsButton).click(roundWinner);
+    $(scissorsButton).click(scissors);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
-    $(paperButton).click(roundWinner);
+    $(paperButton).click(paper);
+       
+    function rock(){
+        playerPick="rock"
+        
+    
+    }
 
-
-
+    function paper(){
+        playerPick="paper"
+    
+    }
+    
+    function scissors(){
+        playerPick="scissors"
+    }
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
@@ -113,15 +125,7 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-    playerPick="";
 
-    if (document.getElementById("paperButton").clicked==true){
-        playerPick="paper";
-    }else if(document.getElementById("rockButton").clicked==true){
-         playerPick="rock"
-    }else if(document.getElementById("scissorsButton").clicked==true){
-          playerPick="scissors"
-    }
     if(playerPick==comPick){
         return "tie";
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
