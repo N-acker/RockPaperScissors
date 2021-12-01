@@ -114,11 +114,11 @@ function roundWinner(){
    comPick=computerPlay();
     playerPick="";
 
-    if (document.getElementbyId("paperButton").clicked==true){
+    if (document.getElementById("paperButton").clicked==true){
         playerPick="paper";
-    }else if(document.getElementbyId("rockButton").clicked==true){
+    }else if(document.getElementById("rockButton").clicked==true){
          playerPick="rock"
-    }else if(document.getElementbyId("scissorsButton").clicked==true){
+    }else if(document.getElementById("scissorsButton").clicked==true){
           playerPick="scissors"
     }
     if(playerPick==comPick){
