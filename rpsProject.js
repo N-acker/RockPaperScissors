@@ -1,4 +1,5 @@
 var playerPick=""
+var roundCounter=3;
 window.onload=function()
 {
     mainscreen();
@@ -129,19 +130,21 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-
-    if(playerPick==comPick){
-        return "tie";
-    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
-        //player wins 
-        playerCounter+=1;
-        return "player";
-    }else{
-     //computer wins
-        compCounter+=1;
-        return "computer";
-    }   
-}
+    while(roundCounter>0){
+        if(playerPick==comPick){
+            return "tie";
+        }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+            //player wins 
+            playerCounter+=1;
+            return "player";
+        }else{
+        //computer wins
+            compCounter+=1;
+            return "computer";
+        }   
+        roundCounter=roundCounter-1; 
+    }
+  }
 
 
 
@@ -157,13 +160,6 @@ function gameWinner(){
             playerCounter=0;
         compCounter=0;
     }
-}
-
-function gameCounter(){
-    compCounter == 0;
-    playercounter == 0;
-    
-
 }
 
 
