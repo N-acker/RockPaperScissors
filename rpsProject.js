@@ -50,8 +50,8 @@ function mainscreen(){
 
 function singlePlayer(){
     
-    var playerCounter = document.getElementById("playerCounter");
-    var compCounter = document.getElementById("compCounter");
+  //  var playerCounter = document.getElementById("playerCounter");
+   // var compCounter = document.getElementById("compCounter");
 
     var playerCounter = 0;
     var compCounter = 0;
