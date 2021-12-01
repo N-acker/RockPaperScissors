@@ -101,8 +101,8 @@ function singlePlayer(){
 
 function roundWinner(){
 
-    $("#singleChoice").empty();
-    $("#header").empty();
+  //  $("#singleChoice").empty();
+ //   $("#header").empty();
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -141,15 +141,6 @@ function gameWinner(){
     
 }
 
-function singleScreen(){
-       winner=roundWinner();
-    if(winner=="player"){
-        alert("You have won");
-    }else{
-        alert("COMPUTER HHAS WON");
-    }
-
-}
 
 
 function multiPlayer(){
