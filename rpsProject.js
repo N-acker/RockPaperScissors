@@ -141,7 +141,15 @@ function gameWinner(){
     
 }
 
+function singleScreen(){
+       winner=roundWinner();
+    if(winner=="player"){
+        alert("You have won");
+    }else{
+        alet("COMPUTER HHAS WON");
+    }
 
+}
 
 
 function multiPlayer(){
