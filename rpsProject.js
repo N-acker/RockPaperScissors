@@ -47,14 +47,15 @@ function mainscreen(){
   
 }
 
+    var playerCounter = 0;
+    var compCounter = 0
 
 function singlePlayer(){
     
   //  var playerCounter = document.getElementById("playerCounter");
    // var compCounter = document.getElementById("compCounter");
 
-    var playerCounter = 0;
-    var compCounter = 0;
+   
     var choice=0;
     var singleDev = document.createElement("div");
 
