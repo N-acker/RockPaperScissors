@@ -85,11 +85,10 @@ display: flex;
 }
 
 #singleContainer {
-	/* width: 50%; */
-	position: absolute;
-	/* top: 30%; */
-	border: 6px solid turquoise;
-	height: 80vh;
+	width: 50%;
+	border-right: 6px solid turquoise;
+	height: 78vh;
+	position: relative;
 
 }
 
@@ -161,15 +160,27 @@ display: flex;
 
 }
 
+#infoContainer {
+
+	border-left: 6px solid turquoise;
+	width: 50%;
+}
+
 #innerPageContainer {
 
 	position: relative;
 	display: flex;
+	flex-direction: row-reverse;
+
 }
 
 #pageContainer{
+
+	border: 6px solid turquoise;
+	height: 80vh;
 	
-	position: absolute;
+	
+	
 }
 
 
