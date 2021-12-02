@@ -141,7 +141,7 @@ function roundWinner(){
             return "player";
         }else if(roundCounter>0){
         //computer wins
-             compCounter+=1;
+             scompCounter+=1;
              roundCounter=roundCounter-1
             return "computer";
         }   
@@ -204,9 +204,12 @@ function multiPlayer(){
     $(innerContainer).attr("id", "singleInner");
     var navContainer = document.createElement("div");
     $(navContainer).attr("id", "singleContainer");
+    var singleCounter = document.createElement("div");
+    $(singleCounter).attr("id", "counterBox");
     $(innerContainer).append(rpsButtonNav)
     $(navContainer).append(innerContainer);
     $(singleChoice).append(navContainer);
+    $(singleCounter).append(innerContainer);
     
     // var p1=document.createElement("span");
     // $(p1).attr("id", "player1")

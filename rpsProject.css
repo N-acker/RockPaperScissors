@@ -99,6 +99,13 @@ display: flex;
 	padding-right: 15%;
 }
 
+#counterBox {
+	height: 20px;
+	  width: 20px;
+	  margin-bottom: 15px;
+	  border: 1px solid turquoise;
+	}
+
 
 /* #singleInner {
 	border-left: 6px solid turquoise;
@@ -154,12 +161,7 @@ display: flex;
 	cursor: pointer;
 
 }
-.counterBox {
-height: 20px;
-  width: 20px;
-  margin-bottom: 15px;
-  border: 1px solid black;
-}
+
 
 
 
