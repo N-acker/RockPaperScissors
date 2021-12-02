@@ -64,14 +64,10 @@ function singlePlayer(){
     $("#buttons").empty();
     $("#header").empty();
 
-    // the header
-
     var single=document.createElement("h1");
     $(single).attr("id", "singleTitle")
     $(single).html("Player Screen");
     $(header).append(single);
-
-    // the buttons
     
     var rockButton = document.createElement("img");
     $(rockButton).attr("id","rockButton");
@@ -80,11 +76,11 @@ function singlePlayer(){
     var scissorsButton = document.createElement("img");
     $(scissorsButton).attr("id","scissorsButton");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
-    $(rockButton).click(rock);
+    $(rockButton).click(roundWinner);
     $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
-    $(scissorsButton).click(scissors);
+    $(scissorsButton).click(roundWinner);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
-    $(paperButton).click(paper);
+    $(paperButton).click(roundWinner);
        
     // function rock(){
     //     playerPick="rock"
@@ -123,7 +119,7 @@ function singlePlayer(){
 
 function roundWinner(){
 
-    $("#singleContainer").empty();
+    // $("#singleContainer").empty();
     // $("#header").empty();
     
     /*var innerContainer = document.createElement("div");
@@ -134,21 +130,18 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-
-
-    var playerPick= 0;
-    
+    var playerPick= document.createElement("p");
 
     if (document.getElementbyId("paperButton").clicked==true){
-        playerPick = "paper";
+        $(playerPick).html("paper");
+        $(singleChoice).append(playerPick);
     }else if(document.getElementbyId("rockButton").clicked==true){
-       playerPick = "rock";
+        $(playerPick).html("rock");
+        $(singleChoice).append(playerPick);
     }else if(document.getElementbyId("scissorsButton").clicked==true){
-       playerPick = "scissors";
+        $(playerPick).html("scissors");
+        $(singleChoice).append(playerPick);
     }
-
-    
-
     if(playerPick==comPick){
         return "tie";
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){

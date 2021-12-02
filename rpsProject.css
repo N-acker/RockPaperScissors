@@ -130,9 +130,8 @@ display: flex;
 #singleTitle {
 
 	display: flex;
-	padding-left: 15%;
+	justify-content: center;
 	border: 6px solid turquoise;
-	width: 50%;
 	
 
 }
