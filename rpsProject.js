@@ -9,14 +9,14 @@ window.onload=function()
 function mainscreen(){
 
     var title=document.createElement("h1");
-    $(title).html("Rock Paper Scissors")
-    $(title).attr("id", "mainTitle")
-    $("header").append(title)
+    $(title).html("Rock Paper Scissors");
+    $(title).attr("id", "mainTitle");
+    $("header").append(title);
 
     var flexDiv=document.createElement("div");
     $(flexDiv).attr("id","flex");
     var newPic=document.createElement("img");
-    $(newPic).attr("id","mainImage" )
+    $(newPic).attr("id","mainImage" );
     // var picDiv=document.createElement("img");
     var picDiv=document.createElement("div");
     $(picDiv).attr("id","picture");
@@ -119,8 +119,13 @@ function singlePlayer(){
 
 function roundWinner(){
 
+<<<<<<< Updated upstream
   //  $("#singleChoice").empty();
  //   $("#header").empty();
+=======
+    $("#singleContainer").empty();
+    // $("#header").empty();
+>>>>>>> Stashed changes
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -130,6 +135,7 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
+<<<<<<< Updated upstream
     
         if(playerPick==comPick && roundCounter>0){
             roundCounter=roundCounter-1
@@ -148,6 +154,32 @@ function roundWinner(){
         
    
   }
+=======
+    var playerPick= document.createElement("p");
+
+    if (document.getElementbyId("paperButton").clicked==true){
+        $(playerPick).html("paper");
+        $(singleChoice).append(playerPick);
+    }else if(document.getElementbyId("rockButton").clicked==true){
+        $(playerPick).html("rock");
+        $(singleChoice).append(playerPick);
+    }else if(document.getElementbyId("scissorsButton").clicked==true){
+        $(playerPick).html("scissors");
+        $(singleChoice).append(playerPick);
+    }
+    if(playerPick==comPick){
+        return "tie";
+    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+        //player wins 
+        playerCounter+=1;
+        return "player";
+    }else{
+     //computer wins
+        compCounter+=1;
+        return "computer";
+    }   
+}
+>>>>>>> Stashed changes
 
 
 
