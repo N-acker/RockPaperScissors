@@ -130,20 +130,23 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-    while(roundCounter>0){
-        if(playerPick==comPick){
+    
+        if(playerPick==comPick && roundCounter>0){
             return "tie";
-        }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+            roundCounter-=1;
+        }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
             //player wins 
             playerCounter+=1;
             return "player";
-        }else{
+            roundCounter-=1;
+        }else if(roundCounter>0{
         //computer wins
+             roundCounter-=1
             compCounter+=1;
             return "computer";
         }   
-        roundCounter=roundCounter-1; 
-    }
+        
+   
   }
 
 
