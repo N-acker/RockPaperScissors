@@ -133,15 +133,15 @@ function roundWinner(){
     
         if(playerPick==comPick && roundCounter>0){
             return "tie";
-            roundCounter-=1;
+            roundCounter=roundCounter-1
         }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
             //player wins 
             playerCounter+=1;
             return "player";
-            roundCounter-=1;
+            roundCounter=roundCounter-1
         }else if(roundCounter>0){
         //computer wins
-             roundCounter-=1
+             roundCounter=roundCounter-1
             compCounter+=1;
             return "computer";
         }   
