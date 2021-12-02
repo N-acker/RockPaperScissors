@@ -111,9 +111,15 @@ function singlePlayer(){
     $(innerContainer).attr("id", "singleInner");
     var navContainer = document.createElement("div");
     $(navContainer).attr("id", "singleContainer");
-    $(innerContainer).append(rpsButtonNav)
+    var infoContainer = document.createElement("div");
+    $(infoContainer) = document.createElement("div");
+    var pageContainer = document.createElement("div");
+    $(pageContainer).attr("id", "pageContainer");
+    $(innerContainer).append(rpsButtonNav);
     $(navContainer).append(innerContainer);
-    $(singleChoice).append(navContainer);
+    $(pageContainer).append(infoContainer);
+    $(pageContainer).append(navContainer);
+    $(singleChoice).append(pageContainer);
      
 }
 
