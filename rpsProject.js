@@ -112,14 +112,14 @@ function singlePlayer(){
     var navContainer = document.createElement("div");
     $(navContainer).attr("id", "singleContainer");
     var infoContainer = document.createElement("div");
-    $(infoContainer) = document.createElement("div");
+    $(infoContainer).attr("id", "infoContainer")
     var pageContainer = document.createElement("div");
     $(pageContainer).attr("id", "pageContainer");
     $(innerContainer).append(rpsButtonNav);
     $(navContainer).append(innerContainer);
     $(pageContainer).append(infoContainer);
     $(pageContainer).append(navContainer);
-    $(singleChoice).append(pageContainer);
+    $("#singleChoice").append(pageContainer);
      
 }
 

@@ -85,7 +85,7 @@ display: flex;
 }
 
 #singleContainer {
-	width: 50%;
+	/* width: 50%; */
 	position: absolute;
 	/* top: 30%; */
 	border: 6px solid turquoise;
@@ -159,6 +159,10 @@ display: flex;
 
 	cursor: pointer;
 
+}
+
+#pageContainer{
+	display: flex;
 }
 
 
