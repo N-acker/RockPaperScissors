@@ -118,7 +118,7 @@ function singlePlayer(){
 
     var innerPageContainer = document.createElement("div");
     $(innerPageContainer).attr("id", "innerPageContainer");
-    
+
     var pageContainer = document.createElement("div");
     $(pageContainer).attr("id", "pageContainer");
     
@@ -127,7 +127,7 @@ function singlePlayer(){
     $(innerPageContainer).append(infoContainer);
     $(innerPageContainer).append(navContainer);
     $(pageContainer).append(innerPageContainer)
-    $("#singleChoice").append(pageContainer);
+    $(singleChoice).append(pageContainer);
      
 }
 

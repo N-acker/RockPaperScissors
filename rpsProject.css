@@ -164,6 +164,7 @@ display: flex;
 #innerPageContainer {
 
 	position: relative;
+	display: flex;
 }
 
 #pageContainer{
