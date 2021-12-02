@@ -139,7 +139,7 @@ function roundWinner(){
             playerCounter+=1;
             return "player";
             roundCounter-=1;
-        }else if(roundCounter>0{
+        }else if(roundCounter>0){
         //computer wins
              roundCounter-=1
             compCounter+=1;
