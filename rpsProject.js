@@ -132,17 +132,17 @@ function roundWinner(){
    comPick=computerPlay();
     
         if(playerPick==comPick && roundCounter>0){
-            return "tie";
             roundCounter=roundCounter-1
+            return "tie";
         }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
             //player wins 
             playerCounter+=1;
-            return "player";
             roundCounter=roundCounter-1
+            return "player";
         }else if(roundCounter>0){
         //computer wins
+             compCounter+=1;
              roundCounter=roundCounter-1
-            compCounter+=1;
             return "computer";
         }   
         
