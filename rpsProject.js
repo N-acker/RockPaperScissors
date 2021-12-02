@@ -192,7 +192,7 @@ function gameWinner(){
     }else if(playerCounter==2){
            alert("You won, computer lost");
       
-    }else if(playerCounter==1 && compCounter==1){
+    }else if(playerCounter==1 && compCounter==1 && roundCounter==0){
         alert("its a tie")
 
     }
