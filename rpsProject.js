@@ -109,16 +109,24 @@ function singlePlayer(){
 
     var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
+
     var navContainer = document.createElement("div");
     $(navContainer).attr("id", "singleContainer");
+
     var infoContainer = document.createElement("div");
-    $(infoContainer).attr("id", "infoContainer")
+    $(infoContainer).attr("id", "infoContainer");
+
+    var innerPageContainer = document.createElement("div");
+    $(innerPageContainer).attr("id", "innerPageContainer");
+    
     var pageContainer = document.createElement("div");
     $(pageContainer).attr("id", "pageContainer");
+    
     $(innerContainer).append(rpsButtonNav);
     $(navContainer).append(innerContainer);
-    $(pageContainer).append(infoContainer);
-    $(pageContainer).append(navContainer);
+    $(innerPageContainer).append(infoContainer);
+    $(innerPageContainer).append(navContainer);
+    $(pageContainer).append(innerPageContainer)
     $("#singleChoice").append(pageContainer);
      
 }

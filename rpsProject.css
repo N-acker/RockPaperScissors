@@ -161,8 +161,14 @@ display: flex;
 
 }
 
+#innerPageContainer {
+
+	position: relative;
+}
+
 #pageContainer{
-	display: flex;
+	
+	position: absolute;
 }
 
 
