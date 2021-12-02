@@ -64,10 +64,14 @@ function singlePlayer(){
     $("#buttons").empty();
     $("#header").empty();
 
+    // the header
+
     var single=document.createElement("h1");
     $(single).attr("id", "singleTitle")
     $(single).html("Player Screen");
     $(header).append(single);
+
+    // the buttons
     
     var rockButton = document.createElement("img");
     $(rockButton).attr("id","rockButton");
@@ -82,24 +86,24 @@ function singlePlayer(){
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
     $(paperButton).click(paper);
        
-    function rock(){
-        playerPick="rock"
-        roundWinner();
-        gameWinner()
+    // function rock(){
+    //     playerPick="rock"
+    //     roundWinner();
+    //     gameWinner()
     
-    }
+    // }
 
-    function paper(){
-        playerPick="paper"
-     roundWinner();
-        gameWinner()
-    }
+    // function paper(){
+    //     playerPick="paper"
+    //  roundWinner();
+    //     gameWinner()
+    // }
     
-    function scissors(){
-        playerPick="scissors"
-         roundWinner();
-        gameWinner()
-    }
+    // function scissors(){
+    //     playerPick="scissors"
+    //      roundWinner();
+    //     gameWinner()
+    // }
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
@@ -119,13 +123,8 @@ function singlePlayer(){
 
 function roundWinner(){
 
-<<<<<<< Updated upstream
-  //  $("#singleChoice").empty();
- //   $("#header").empty();
-=======
     $("#singleContainer").empty();
     // $("#header").empty();
->>>>>>> Stashed changes
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -135,38 +134,21 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-<<<<<<< Updated upstream
+
+
+    var playerPick= 0;
     
-        if(playerPick==comPick && roundCounter>0){
-            roundCounter=roundCounter-1
-            return "tie";
-        }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
-            //player wins 
-            playerCounter+=1;
-            roundCounter=roundCounter-1
-            return "player";
-        }else if(roundCounter>0){
-        //computer wins
-             scompCounter+=1;
-             roundCounter=roundCounter-1
-            return "computer";
-        }   
-        
-   
-  }
-=======
-    var playerPick= document.createElement("p");
 
     if (document.getElementbyId("paperButton").clicked==true){
-        $(playerPick).html("paper");
-        $(singleChoice).append(playerPick);
+        playerPick = "paper";
     }else if(document.getElementbyId("rockButton").clicked==true){
-        $(playerPick).html("rock");
-        $(singleChoice).append(playerPick);
+       playerPick = "rock";
     }else if(document.getElementbyId("scissorsButton").clicked==true){
-        $(playerPick).html("scissors");
-        $(singleChoice).append(playerPick);
+       playerPick = "scissors";
     }
+
+    
+
     if(playerPick==comPick){
         return "tie";
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
@@ -179,7 +161,6 @@ function roundWinner(){
         return "computer";
     }   
 }
->>>>>>> Stashed changes
 
 
 
