@@ -128,13 +128,13 @@ function roundWinner(){
     var playerPick= document.createElement("p");
     $(infoContainer).append(playerPick)
 
-    if (document.getElementbyId("paperButton").clicked==true){
+    if (document.getElementById("paperButton").clicked==true){
         $(playerPick).html("paper");
         alert("paper")
-    }else if(document.getElementbyId("rockButton").clicked==true){
+    }else if(document.getElementById("rockButton").clicked==true){
         $(playerPick).html("rock");
         
-    }else if(document.getElementbyId("scissorsButton").clicked==true){
+    }else if(document.getElementById("scissorsButton").clicked==true){
         $(playerPick).html("scissors");
         
     }
