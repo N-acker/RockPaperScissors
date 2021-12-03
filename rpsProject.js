@@ -130,6 +130,7 @@ function roundWinner(){
     var playerPick= document.createElement("p");
     $(infoContainer).append(playerPick)
     player="";
+    var comPick="";
     if (document.getElementById("paperButton").clicked==true){
         $(playerPick).html("paper");
         alert("paper")
