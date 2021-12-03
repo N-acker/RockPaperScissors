@@ -125,6 +125,7 @@ function computerPlay(){
 function roundWinner(){
 
     
+    
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
     var navContainer = document.createElement("div");
@@ -148,13 +149,7 @@ function roundWinner(){
         playerPick = "scissors"
         
     }
-      $.post(
-            url+'?data='+JSON.stringify({
-      'playerChoice':playerPick,
-             'action':'generateComp'
-            }),
-            response
-        );
+
     console.log(playerPick)
 
     if(playerPick==comPick){
