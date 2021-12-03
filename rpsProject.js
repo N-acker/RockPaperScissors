@@ -115,7 +115,7 @@ function singlePlayer(){
 
 function roundWinner(){
 
-    // $("#singleContainer").empty();
+    
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -125,15 +125,15 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-    var playerPick= ""
+    var playerPick= "";
+    
     var output = document.createElement("p");
     $(infoContainer).append(output);
-
+    
     if ($("paperButton").clicked==true){
         playerPick = "paper"
     }else if($("rockButton").clicked==true){
-        playerPick = "rock"
-        
+        playerPick = "rock" 
     }else if($("scissorsButton").clicked==true){
         playerPick = "scissors"
         
@@ -143,11 +143,11 @@ function roundWinner(){
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
         //player wins 
         playerCounter+=1;
-        $(output).html("player wins")
+        $(output).html("player wins");
     }else{
      //computer wins
         compCounter+=1;
-        $(output).html("computer wins")
+        $(output).html("computer wins");
     }   
 }
 
