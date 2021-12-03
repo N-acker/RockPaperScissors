@@ -173,13 +173,13 @@ function roundWinner(){
 
         var goBack = document.createElement("button")
         $(goBack).attr("id", "restartButton");
-        $(goBack).html("restart");
+        $(goBack).html("Restart");
         $(goBack).click(redo);
         
 
         var homeButton = document.createElement("button")
         $(homeButton).attr("id", "homeButton");
-        $(homeButton).html("home");
+        $(homeButton).html("Home");
         $(homeButton).click(home);
         
 
