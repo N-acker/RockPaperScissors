@@ -224,14 +224,14 @@ function redo(){
 function gameWinner(){
    
     if(compCounter > playerCounter){
-        alert("You lost, computer won");
+        alert("Oops! You lost, play again?");
       
         
     }else if(playerCounter > compCounter){
-           alert("You won, computer lost");
+           alert("You won! Play again?");
       
     }else{
-        alert("its a tie")
+        alert("It's a tie. Play again?")
 
     }
 }
