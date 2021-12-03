@@ -82,24 +82,6 @@ function singlePlayer(){
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
     $(paperButton).click(roundWinner);
        
-    // function rock(){
-    //     playerPick="rock"
-    //     roundWinner();
-    //     gameWinner()
-    
-    // }
-
-    // function paper(){
-    //     playerPick="paper"
-    //  roundWinner();
-    //     gameWinner()
-    // }
-    
-    // function scissors(){
-    //     playerPick="scissors"
-    //      roundWinner();
-    //     gameWinner()
-    // }
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
@@ -145,28 +127,31 @@ function roundWinner(){
     
    comPick=computerPlay();
     var playerPick= document.createElement("p");
+    $(infoContainer).append(playerPick)
 
     if (document.getElementbyId("paperButton").clicked==true){
         $(playerPick).html("paper");
-        $(singleChoice).append(playerPick);
+        alert("paper")
     }else if(document.getElementbyId("rockButton").clicked==true){
         $(playerPick).html("rock");
-        $(singleChoice).append(playerPick);
+        
     }else if(document.getElementbyId("scissorsButton").clicked==true){
         $(playerPick).html("scissors");
-        $(singleChoice).append(playerPick);
+        
     }
-    if(playerPick==comPick){
-        return "tie";
-    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
-        //player wins 
-        playerCounter+=1;
-        return "player";
-    }else{
-     //computer wins
-        compCounter+=1;
-        return "computer";
-    }   
+
+    return playerPick
+    // if(playerPick==comPick){
+    //     return "tie";
+    // }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+    //     //player wins 
+    //     playerCounter+=1;
+    //     return "player";
+    // }else{
+    //  //computer wins
+    //     compCounter+=1;
+    //     return "computer";
+    // }   
 }
 
 
@@ -199,6 +184,7 @@ function multiPlayer(){
     $(multiP).html("Player One Screen");
     $(header).append(multiP);
 
+
     var rockButton = document.createElement("img");
     $(rockButton).attr("id","rockButton");
     var paperButton = document.createElement("img");
@@ -211,8 +197,7 @@ function multiPlayer(){
     $(scissorsButton).click(roundWinner);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
     $(paperButton).click(roundWinner);
-    
-
+       
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
      $(rpsButtonNav).append(rockButton);
@@ -222,14 +207,26 @@ function multiPlayer(){
 
     var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
+
     var navContainer = document.createElement("div");
     $(navContainer).attr("id", "singleContainer");
-    var singleCounter = document.createElement("div");
-    $(singleCounter).attr("id", "counterBox");
-    $(innerContainer).append(rpsButtonNav)
+
+    var infoContainer = document.createElement("div");
+    $(infoContainer).attr("id", "infoContainer");
+
+    var innerPageContainer = document.createElement("div");
+    $(innerPageContainer).attr("id", "innerPageContainer");
+
+    var pageContainer = document.createElement("div");
+    $(pageContainer).attr("id", "pageContainer");
+    
+    $(innerContainer).append(rpsButtonNav);
     $(navContainer).append(innerContainer);
-    $(singleChoice).append(navContainer);
-    $(singleCounter).append(innerContainer);
+    $(innerPageContainer).append(infoContainer);
+    $(innerPageContainer).append(navContainer);
+    $(pageContainer).append(innerPageContainer)
+    $(singleChoice).append(pageContainer);
+    
     
     // var p1=document.createElement("span");
     // $(p1).attr("id", "player1")
