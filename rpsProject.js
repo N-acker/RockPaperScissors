@@ -115,7 +115,7 @@ function singlePlayer(){
 
 function roundWinner(){
 
-    
+    $("#singleContainer").empty();
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -125,30 +125,34 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-    var playerPick= "";
     
-    var output = document.createElement("p");
-    $(infoContainer).append(output);
     
-    if ($("paperButton").clicked==true){
-        playerPick = "paper"
-    }else if($("rockButton").clicked==true){
-        playerPick = "rock" 
-    }else if($("scissorsButton").clicked==true){
-        playerPick = "scissors"
+    var playerPick= document.createElement("p");
+    $(infoContainer).append(playerPick)
+    
+    if (document.getElementById("paperButton").clicked==true){
+        $(playerPick).html("paper");
+        alert("paper")
+    }else if(document.getElementById("rockButton").clicked==true){
+        $(playerPick).html("rock");
+        
+    }else if(document.getElementById("scissorsButton").clicked==true){
+        $(playerPick).html("scissors");
         
     }
-    if(playerPick==comPick){
-        $(output).html("tie");
-    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
-        //player wins 
-        playerCounter+=1;
-        $(output).html("player wins");
-    }else{
+
+    return playerPick
+     if(playerPick==comPick && roundCounter>0){
+         return "tie";
+     }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+         //player wins 
+         playerCounter+=1;
+        return "player";
+     }else if (roundCounter>0){
      //computer wins
         compCounter+=1;
-        $(output).html("computer wins");
-    }   
+        return "computer";
+     }   
 }
 
 
@@ -239,8 +243,8 @@ function multiPlayer(){
 }
 
 function computerPlay(){
-    var computerChoice=["rock","paper","scissors"]
-    var computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
+    computerChoice=["rock","paper","scissors"]
+    computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
     return computerMove;
     
 
