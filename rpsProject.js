@@ -116,7 +116,6 @@ function singlePlayer(){
 function roundWinner(){
 
     // $("#singleContainer").empty();
-    // $("#header").empty();
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -126,30 +125,29 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-    var playerPick= document.createElement("p");
-    $(infoContainer).append(playerPick)
+    var playerPick= ""
+    var output = document.createElement("p");
+    $(infoContainer).append(output);
 
     if ($("paperButton").clicked==true){
-        $(playerPick).html("paper");
-        alert("paper")
+        playerPick = "paper"
     }else if($("rockButton").clicked==true){
-        $(playerPick).html("rock");
+        playerPick = "rock"
         
     }else if($("scissorsButton").clicked==true){
-        $(playerPick).html("scissors");
+        playerPick = "scissors"
         
     }
-
     if(playerPick==comPick){
-        return "tie";
+        $(output).html("tie");
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
         //player wins 
         playerCounter+=1;
-        return "player";
+        $(output).html("player wins")
     }else{
      //computer wins
         compCounter+=1;
-        return "computer";
+        $(output).html("computer wins")
     }   
 }
 
@@ -241,8 +239,8 @@ function multiPlayer(){
 }
 
 function computerPlay(){
-    computerChoice=["rock","paper","scissors"]
-    computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
+    var computerChoice=["rock","paper","scissors"]
+    var computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
     return computerMove;
     
 
