@@ -129,29 +129,28 @@ function roundWinner(){
     var playerPick= document.createElement("p");
     $(infoContainer).append(playerPick)
 
-    if (document.getElementbyId("paperButton").clicked==true){
+    if ($("paperButton").clicked==true){
         $(playerPick).html("paper");
         alert("paper")
-    }else if(document.getElementbyId("rockButton").clicked==true){
+    }else if($("rockButton").clicked==true){
         $(playerPick).html("rock");
         
-    }else if(document.getElementbyId("scissorsButton").clicked==true){
+    }else if($("scissorsButton").clicked==true){
         $(playerPick).html("scissors");
         
     }
 
-    return playerPick
-    // if(playerPick==comPick){
-    //     return "tie";
-    // }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
-    //     //player wins 
-    //     playerCounter+=1;
-    //     return "player";
-    // }else{
-    //  //computer wins
-    //     compCounter+=1;
-    //     return "computer";
-    // }   
+    if(playerPick==comPick){
+        return "tie";
+    }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+        //player wins 
+        playerCounter+=1;
+        return "player";
+    }else{
+     //computer wins
+        compCounter+=1;
+        return "computer";
+    }   
 }
 
 

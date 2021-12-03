@@ -161,6 +161,11 @@ display: flex;
 
 }
 
+button:hover {
+
+	cursor: pointer;
+}
+
 #infoContainer {
 
 	border-left: 6px solid turquoise;
