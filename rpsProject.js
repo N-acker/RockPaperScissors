@@ -142,7 +142,6 @@ function roundWinner(){
         player="scissors"
     }
 
-    return playerPick
      if(playerPick==comPick && roundCounter>0){
          return "tie";
      }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
