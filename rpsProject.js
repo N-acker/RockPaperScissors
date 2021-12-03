@@ -231,7 +231,7 @@ function gameWinner(){
            alert("You won! Play again?");
       
     }else{
-        alert("It's a tie. Play again?")
+        alert("It's a tie! Play again?")
 
     }
 }
