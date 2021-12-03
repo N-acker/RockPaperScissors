@@ -191,7 +191,10 @@ button:hover {
 
 #restartButton{
 	position: relative;
-	top: 35%;
+}
+
+#homeButton{
+	position: relative;
 }
 
 
@@ -202,6 +205,13 @@ button:hover {
 	justify-content: center;
 	font-size: 50px;
 	font-weight: 800;
+}
+
+#postGameNav{
+
+	position: relative;
+	justify-content: center;
+	display: flex;
 }
 
 

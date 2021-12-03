@@ -174,14 +174,46 @@ function roundWinner(){
         var goBack = document.createElement("button")
         $(goBack).attr("id", "restartButton");
         $(goBack).html("restart");
-        $(goBack).click();
-        $(infoContainer).append(goBack);
+        $(goBack).click(redo);
+        
+
+        var homeButton = document.createElement("button")
+        $(homeButton).attr("id", "homeButton");
+        $(homeButton).html("home");
+        $(homeButton).click(home);
+        
+
+        var postGameNav = document.createElement("div")
+        $(postGameNav).attr("id", "postGameNav")
+        $(postGameNav).append(goBack);
+        $(postGameNav).append(homeButton)
+        $(infoContainer).append(postGameNav);
+
     }
 
-
-    
-
 }
+
+
+
+function home(){
+
+    $(singleChoice).empty();
+    $(header).empty();
+    mainscreen()
+    roundCounter = 1;
+}
+
+
+
+function redo(){
+
+
+    $(infoContainer).empty();
+    roundCounter = 1;
+}
+
+
+
 
 
 
