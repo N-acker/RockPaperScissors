@@ -1,4 +1,6 @@
-var playerPick=""
+var playerPick="";
+var playerOnePick="";
+var playerTwoPick="";
 var roundCounter=1;
 var url = "http://localhost:3000/post";
 
