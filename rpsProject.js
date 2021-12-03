@@ -1,5 +1,6 @@
 var playerPick=""
 var roundCounter=1;
+var url = "http://localhost:3000/post";
 
 window.onload=function()
 {
