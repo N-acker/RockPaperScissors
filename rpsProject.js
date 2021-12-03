@@ -113,6 +113,14 @@ function singlePlayer(){
      
 }
 
+function computerPlay(){
+    var computerChoice=["rock","paper","scissors"]
+    var computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
+    console.log(computerMove)
+    return computerMove;
+}
+
+
 function roundWinner(){
 
     
@@ -129,7 +137,7 @@ function roundWinner(){
     
     var output = document.createElement("p");
     $(infoContainer).append(output);
-    
+
     if ($("paperButton").clicked==true){
         playerPick = "paper"
     }else if($("rockButton").clicked==true){
@@ -138,15 +146,16 @@ function roundWinner(){
         playerPick = "scissors"
         
     }
+
+    console.log(playerPick)
+
     if(playerPick==comPick){
         $(output).html("tie");
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
         //player wins 
-        playerCounter+=1;
         $(output).html("player wins");
     }else{
      //computer wins
-        compCounter+=1;
         $(output).html("computer wins");
     }   
 }
@@ -238,10 +247,4 @@ function multiPlayer(){
     
 }
 
-function computerPlay(){
-    var computerChoice=["rock","paper","scissors"]
-    var computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
-    return computerMove;
-    
 
-}
