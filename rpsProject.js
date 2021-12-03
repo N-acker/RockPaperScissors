@@ -135,7 +135,7 @@ function roundWinner(){
     
    comPick=computerPlay();
     
-    if(roundCounter < 1){
+    if(roundCounter <= 2){
     var output = document.createElement("p");
     $(output).attr("id", "output")
     $(infoContainer).append(output);
