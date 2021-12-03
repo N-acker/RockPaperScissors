@@ -124,7 +124,7 @@ function roundWinner(){
     $(innerContainer).append(rpsButtonNav)
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
-   comPick=computerPlay();
+
     
     
     var playerPick= document.createElement("p");
@@ -134,12 +134,15 @@ function roundWinner(){
         $(playerPick).html("paper");
         alert("paper")
         player="paper"
+           comPick=computerPlay();
     }else if(document.getElementById("rockButton").clicked==true){
         $(playerPick).html("rock");
         player="rock";
+           comPick=computerPlay();
     }else if(document.getElementById("scissorsButton").clicked==true){
         $(playerPick).html("scissors");
         player="scissors"
+           comPick=computerPlay();
     }
 
      if(playerPick==comPick && roundCounter>0){
