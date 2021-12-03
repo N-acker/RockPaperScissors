@@ -129,16 +129,17 @@ function roundWinner(){
     
     var playerPick= document.createElement("p");
     $(infoContainer).append(playerPick)
-    
+    player="";
     if (document.getElementById("paperButton").clicked==true){
         $(playerPick).html("paper");
         alert("paper")
+        player="paper"
     }else if(document.getElementById("rockButton").clicked==true){
         $(playerPick).html("rock");
-        
+        player="rock";
     }else if(document.getElementById("scissorsButton").clicked==true){
         $(playerPick).html("scissors");
-        
+        player="scissors"
     }
 
     return playerPick
