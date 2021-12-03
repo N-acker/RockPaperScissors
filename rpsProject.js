@@ -115,7 +115,7 @@ function singlePlayer(){
 
 function roundWinner(){
 
-    $("#singleContainer").empty();
+  //  $("#singleContainer").empty();
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
