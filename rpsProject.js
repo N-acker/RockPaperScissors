@@ -123,7 +123,7 @@ function computerPlay(){
 
 function roundWinner(){
 
-    
+  //  $("#singleContainer").empty();
     
     /*var innerContainer = document.createElement("div");
     $(innerContainer).attr("id", "singleInner");
@@ -132,9 +132,9 @@ function roundWinner(){
     $(innerContainer).append(rpsButtonNav)
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
-   comPick=computerPlay();
-    var playerPick= "";
+
     
+<<<<<<< HEAD
     var output = document.createElement("p");
     $(infoContainer).append(output);
 
@@ -158,6 +158,39 @@ function roundWinner(){
      //computer wins
         $(output).html("computer wins");
     }   
+=======
+    
+    var playerPick= document.createElement("p");
+    $(infoContainer).append(playerPick)
+    player="";
+    var comPick="";
+    if (document.getElementById("paperButton").clicked==true){
+        $(playerPick).html("paper");
+        alert("paper")
+        player="paper"
+           comPick=computerPlay();
+    }else if(document.getElementById("rockButton").clicked==true){
+        $(playerPick).html("rock");
+        player="rock";
+           comPick=computerPlay();
+    }else if(document.getElementById("scissorsButton").clicked==true){
+        $(playerPick).html("scissors");
+        player="scissors"
+           comPick=computerPlay();
+    }
+
+     if(playerPick==comPick && roundCounter>0){
+         return "tie";
+     }else if(playerPick=="rock" && comPick=="scissors" && roundCounter>0 || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
+         //player wins 
+         playerCounter+=1;
+        return "player";
+     }else if (roundCounter>0){
+     //computer wins
+        compCounter+=1;
+        return "computer";
+     }   
+>>>>>>> a5c09b5b9c41bcba7d635494bf4319738db0c920
 }
 
 
@@ -247,4 +280,12 @@ function multiPlayer(){
     
 }
 
+<<<<<<< HEAD
+=======
+function computerPlay(){
+    computerChoice=["rock","paper","scissors"]
+    computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
+    return computerMove;
+    
+>>>>>>> a5c09b5b9c41bcba7d635494bf4319738db0c920
 
