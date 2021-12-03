@@ -123,15 +123,6 @@ function computerPlay(){
 
 
 function roundWinner(){
-
-    
-    
-    /*var innerContainer = document.createElement("div");
-    $(innerContainer).attr("id", "singleInner");
-    var navContainer = document.createElement("div");
-    $(navContainer).attr("id", "singleContainer");
-    $(innerContainer).append(rpsButtonNav)
-    $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
     
