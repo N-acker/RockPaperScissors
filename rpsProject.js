@@ -1,5 +1,6 @@
 var playerPick=""
-var roundCounter=3;
+var roundCounter=1;
+
 window.onload=function()
 {
     mainscreen();
@@ -56,7 +57,7 @@ function singlePlayer(){
   //  var playerCounter = document.getElementById("playerCounter");
    // var compCounter = document.getElementById("compCounter");
 
-   
+    
     var choice=0;
     var singleDev = document.createElement("div");
 
@@ -133,16 +134,18 @@ function roundWinner(){
     $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
     
    comPick=computerPlay();
-    var playerPick= "";
     
+    if(roundCounter <= 3){
     var output = document.createElement("p");
+    $(output).attr("id", "output")
     $(infoContainer).append(output);
+ 
 
-    if ($("paperButton").clicked==true){
+    if ( $(paperButton).click){
         playerPick = "paper"
-    }else if($("rockButton").clicked==true){
+    }else if( $(rockButton).click){
         playerPick = "rock" 
-    }else if($("scissorsButton").clicked==true){
+    }else if( $(scissorsButton).click){
         playerPick = "scissors"
         
     }
@@ -154,24 +157,44 @@ function roundWinner(){
     }else if(playerPick=="rock" && comPick=="scissors" || playerPick=="paper" && comPick=="rock" || playerPick=="scissors" && comPick=="paper"){
         //player wins 
         $(output).html("player wins");
+        playerCounter = playerCounter + 1;
     }else{
      //computer wins
         $(output).html("computer wins");
-    }   
+        compCounter = compCounter + 1;
+    } 
+
+    roundCounter = roundCounter + 1;
+    
+    }else{
+
+        $(infoContainer).empty();
+        gameWinner(compCounter, playerCounter);
+
+        var goBack = document.createElement("button")
+        $(goBack).attr("id", "restartButton");
+        $(goBack).html("restart");
+        $(goBack).click();
+        $(infoContainer).append(goBack);
+    }
+
+
+    
+
 }
 
 
 
 function gameWinner(){
    
-    if(compCounter==2){
+    if(compCounter > playerCounter){
         alert("You lost, computer won");
       
         
-    }else if(playerCounter==2){
+    }else if(playerCounter > compCounter){
            alert("You won, computer lost");
       
-    }else if(playerCounter==1 && compCounter==1 && roundCounter==0){
+    }else{
         alert("its a tie")
 
     }
