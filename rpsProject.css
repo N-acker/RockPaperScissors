@@ -203,7 +203,7 @@ button:hover {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	font-size: 50px;
+	font-size: 30px;
 	font-weight: 800;
 }
 
@@ -218,6 +218,11 @@ button:hover {
 
 	font-weight: 900;
 	font-size: 15px;
+}
+
+span{
+
+	text-decoration: underline;
 }
 
 
