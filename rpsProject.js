@@ -218,8 +218,8 @@ function redo(){
     playerCounter = 0;
 }
 
-//function response(){
-    
+//function response(data){
+    //var response=JSON.parse(data);
  //   if(response['action']=='computerGen'){
        // comPick=response['comPick'];
     
