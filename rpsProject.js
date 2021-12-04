@@ -147,7 +147,7 @@ function roundWinner(){
        //  $.post(
          //   url+'?data='+JSON.stringify({
            // 'playerPick':playerPick
-                'action':'evaluate'
+             //   'action':'evaluate'
          //   }),
          //   response
        // );
