@@ -146,7 +146,7 @@ function roundWinner(){
 
        //  $.post(
          //   url+'?data='+JSON.stringify({
-           // 'comPick':comPick
+       
              //   'action':'evaluate'
          //   }),
          //   response
