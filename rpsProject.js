@@ -126,7 +126,7 @@ function computerPlay(){
 
 
 function roundWinner(){
-    
+    //var comPick;
    comPick=computerPlay();
     
     if(roundCounter <= 2){
@@ -146,7 +146,7 @@ function roundWinner(){
 
        //  $.post(
          //   url+'?data='+JSON.stringify({
-           // 'playerPick':playerPick
+           // 'comPick':comPick
              //   'action':'evaluate'
          //   }),
          //   response
