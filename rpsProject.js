@@ -144,13 +144,13 @@ function roundWinner(){
         
     }
 
-         $.post(
-            url+'?data='+JSON.stringify({
-            'playerPick':playerPick
+       //  $.post(
+         //   url+'?data='+JSON.stringify({
+           // 'playerPick':playerPick
                 'action':'evaluate'
-            }),
-            response
-        );
+         //   }),
+         //   response
+       // );
     console.log(playerPick)
 
     if(playerPick==comPick){
