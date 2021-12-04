@@ -15,7 +15,7 @@ app.post('/post', (req, res) => {
         var comPick=computerChoice[Math.round(Math.random()*2)];
         var jsontext = JSON.stringify({
             'action': 'computerGen'
-            'comp': comPick,
+            'comPick': comPick,
         });
        res.send(jsontext);
         
