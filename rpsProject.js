@@ -126,7 +126,7 @@ function computerPlay(){
 
 
 function roundWinner(){
-    //var comPick;
+    //var comPick; this will equal to rock,apper or siccor once the client gets the infromation from server it will be set to rock,apper orscirros at the reponse() function below
    comPick=computerPlay();
     
     if(roundCounter <= 2){
