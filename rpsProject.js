@@ -151,6 +151,7 @@ function roundWinner(){
          //   }),
          //   response
        // );
+       
     console.log(playerPick)
 
     if(playerPick==comPick){
@@ -217,7 +218,15 @@ function redo(){
     playerCounter = 0;
 }
 
+//function response(){
+    
+ //   if(response['action']=='computerGen'){
+       // comPick=response['comPick'];
+    
+//    }
 
+    
+//}
 
 
 
