@@ -87,7 +87,7 @@ display: flex;
 #singleContainer {
 	width: 50%;
 	border-right: 6px solid turquoise;
-	height: 78vh;
+	height: 73vh;
 	position: relative;
 
 }
@@ -174,16 +174,16 @@ button:hover {
 
 #innerPageContainer {
 
-	position: relative;
 	display: flex;
 	flex-direction: row-reverse;
+	
 
 }
 
 #pageContainer{
 
 	border: 6px solid turquoise;
-	height: 80vh;
+	height: 75vh;
 	
 	
 	
@@ -212,6 +212,12 @@ button:hover {
 	position: relative;
 	justify-content: center;
 	display: flex;
+}
+
+#singleExplanation{
+
+	font-weight: 900;
+	font-size: 15px;
 }
 
 

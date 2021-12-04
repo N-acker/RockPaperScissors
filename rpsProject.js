@@ -1,8 +1,10 @@
 var playerPick="";
+var roundCounter=1;
+var multiplayerCount=1;
 var playerOnePick="";
 var playerTwoPick="";
-var roundCounter=1;
-var url = "http://localhost:3000/post";
+var playerOneActivation = 0;
+var playerTwoActivation = 0;
 
 window.onload=function()
 {
@@ -72,6 +74,12 @@ function singlePlayer(){
     $(single).attr("id", "singleTitle")
     $(single).html("Player Screen");
     $(header).append(single);
+
+    var singleExplanation = document.createElement("p");
+    $(singleExplanation).attr("id", "singleExplanation")
+     $(singleExplanation). html("Each game has 3 rounds; once the 3 rounds are over, just click any of the buttons again to see who wins the game!");
+     $(header).append(singleExplanation);
+
     
     var rockButton = document.createElement("img");
     $(rockButton).attr("id","rockButton");
@@ -91,6 +99,8 @@ function singlePlayer(){
      $(rpsButtonNav).append(rockButton);
      $(rpsButtonNav).append(paperButton);
      $(rpsButtonNav).append(scissorsButton);
+
+     
 
 
     var innerContainer = document.createElement("div");
@@ -120,16 +130,24 @@ function singlePlayer(){
 function computerPlay(){
     var computerChoice=["rock","paper","scissors"]
     var computerMove=computerChoice[Math.round(Math.random()*2)]; //3, so it counts 0, 1 and 2 as options since math.random does the numbers below the one written
-    console.log(computerMove)
     return computerMove;
 }
 
 
 function roundWinner(){
-    //var comPick; this will equal to rock,apper or siccor once the client gets the infromation from server it will be set to rock,apper orscirros at the reponse() function below
+
+    
+    
+    /*var innerContainer = document.createElement("div");
+    $(innerContainer).attr("id", "singleInner");
+    var navContainer = document.createElement("div");
+    $(navContainer).attr("id", "singleContainer");
+    $(innerContainer).append(rpsButtonNav)
+    $(navContainer).append(innerContainer); potential code for adding the column to the right side of the screen*/
+    
    comPick=computerPlay();
     
-    if(roundCounter <= 2){
+    if(roundCounter <= 3){
     var output = document.createElement("p");
     $(output).attr("id", "output")
     $(infoContainer).append(output);
@@ -144,15 +162,6 @@ function roundWinner(){
         
     }
 
-       //  $.post(
-         //   url+'?data='+JSON.stringify({
-       
-             //   'action':'evaluate'
-         //   }),
-         //   response
-       // );
-       
-    console.log(playerPick)
 
     if(playerPick==comPick){
         $(output).html("tie");
@@ -175,13 +184,13 @@ function roundWinner(){
 
         var goBack = document.createElement("button")
         $(goBack).attr("id", "restartButton");
-        $(goBack).html("Restart");
+        $(goBack).html("restart");
         $(goBack).click(redo);
         
 
         var homeButton = document.createElement("button")
         $(homeButton).attr("id", "homeButton");
-        $(homeButton).html("Home");
+        $(homeButton).html("home");
         $(homeButton).click(home);
         
 
@@ -218,15 +227,7 @@ function redo(){
     playerCounter = 0;
 }
 
-//function response(data){
-    //var response=JSON.parse(data);
- //   if(response['action']=='computerGen'){
-       // comPick=response['comPick'];
-    
-//    }
 
-    
-//}
 
 
 
@@ -234,30 +235,41 @@ function redo(){
 function gameWinner(){
    
     if(compCounter > playerCounter){
-        alert("Oops! You lost, play again?");
+        alert("You lost, computer won");
       
         
     }else if(playerCounter > compCounter){
-           alert("You won! Play again?");
+           alert("You won, computer lost");
       
     }else{
-        alert("It's a tie! Play again?")
+        alert("its a tie")
 
     }
 }
 
 
 
+
+
+
+var playerOneCounter = 0;
+var playerTwoCounter = 0; 
+
 function multiPlayer(){
-    var multiDev = document.createElement("div");
+    
     $("#mainscreen").empty();
     $("#buttons").empty();
     $("#header").empty();
     
     var multiP=document.createElement("h1");
     $(multiP).attr("id", "multiTitle")
-    $(multiP).html("Player One Screen");
+    $(multiP).html("Multiplayer");
     $(header).append(multiP);
+
+    var singleExplanation = document.createElement("p");
+    $(singleExplanation).attr("id", "singleExplanation")
+     $(singleExplanation). html("Each game has 3 rounds; player one will input their choice, then player two; this will happen for each of the rounds;make sure to click any button an extra time and the winner will be displayed!");
+     $(header).append(singleExplanation);
 
 
     var rockButton = document.createElement("img");
@@ -267,11 +279,11 @@ function multiPlayer(){
     var scissorsButton = document.createElement("img");
     $(scissorsButton).attr("id","scissorsButton");
     $(rockButton).attr("src","images/rps_icons/rps_rock.png");
-    $(rockButton).click(roundWinner);
+    $(rockButton).click(playerOneOrTwo);
     $(scissorsButton).attr("src", "images/rps_icons/rps_scissors.png");
-    $(scissorsButton).click(roundWinner);
+    $(scissorsButton).click(playerOneOrTwo);
     $(paperButton).attr("src", "images/rps_icons/rps_paper.png");
-    $(paperButton).click(roundWinner);
+    $(paperButton).click(playerOneOrTwo);
        
     var rpsButtonNav = document.createElement("nav");
     $(rpsButtonNav).attr("id", "singlePlayerNav")
@@ -294,6 +306,7 @@ function multiPlayer(){
 
     var pageContainer = document.createElement("div");
     $(pageContainer).attr("id", "pageContainer");
+
     
     $(innerContainer).append(rpsButtonNav);
     $(navContainer).append(innerContainer);
@@ -302,16 +315,164 @@ function multiPlayer(){
     $(pageContainer).append(innerPageContainer)
     $(singleChoice).append(pageContainer);
     
-    
-    // var p1=document.createElement("span");
-    // $(p1).attr("id", "player1")
-    // $(p1).html("Player One");
-    // $(multiP).append(p1);
+}
 
-    // var p2=document.createElement("span");
-    // $(p2).attr("id", "player2")
-    // $(p2).html("Player Two");
-    // $(multiP).append(p2);
+
+
+function playerOneOrTwo(){
+
+    if(multiplayerCount <=6){
+
+        if(multiplayerCount % 2 == 0){
+
+            playerTwoPlay()
+        }else{
+            playerOnePlay()
+        }
+
+    }else {
+
+        $(infoContainer).empty();
+        gameWinnerMulti(playerOneCounter, playerTwoCounter);
+
+        var goBack = document.createElement("button")
+        $(goBack).attr("id", "restartButton");
+        $(goBack).html("restart");
+        $(goBack).click(multiRedo);
+        
+
+        var homeButton = document.createElement("button")
+        $(homeButton).attr("id", "homeButton");
+        $(homeButton).html("home");
+        $(homeButton).click(multiHome);
+        
+
+        var postGameNav = document.createElement("div")
+        $(postGameNav).attr("id", "postGameNav")
+        $(postGameNav).append(goBack);
+        $(postGameNav).append(homeButton)
+        $(infoContainer).append(postGameNav);
+
+    }
+
+}
+
+function playerOnePlay(){
+
+
+    playerOneActivation = playerOneActivation + 1;
+    
+    $(singleExplanation).html("Player One's Turn");
+ 
+
+    if ( $(paperButton).click){
+        playerOnePick = "paper"
+    }else if( $(rockButton).click){
+        playerOnePick = "rock" 
+    }else if( $(scissorsButton).click){
+        playerOnePick = "scissors"
+        
+    }
+
+    multiPlay(playerOneActivation)
+
+}
+
+
+function playerTwoPlay(){
+
+     playerTwoActivation = playerOneActivation + 1;
+
+    $(singleExplanation).html("Player Two's Turn");
+
+ 
+
+    if ( $(paperButton).click){
+        playerTwoPick = "paper"
+    }else if( $(rockButton).click){
+        playerTwoPick = "rock" 
+    }else if( $(scissorsButton).click){
+        playerTwoPick = "scissors"
+        
+    }
+
+    multiPlay(playerTwoActivation)
+
+}
+
+
+
+
+
+function multiPlay(){
 
     
+    var output = document.createElement("p");
+    $(output).attr("id", "output")
+    $(infoContainer).append(output);
+    
+
+    if(playerOneActivation == playerTwoActivation){
+        if(playerOnePick==playerTwoPick){
+            $(output).html("tie");
+            console.log(output)
+        }else if(playerOnePick=="rock" && playerTwoPick=="scissors" || playerOnePick=="paper" && playerTwoPick=="rock" || playerOnePick=="scissors" && PlayerTwoPick=="paper"){
+            //player wins 
+            $(output).html("player 1 wins");
+            playerOneCounter = playerOneCounter + 1;
+        }else{
+        //computer wins
+            $(output).html("player 2 wins");
+            playerTwoCounter = playerTwoCounter + 1;
+        } 
+    }    
+
+    multiplayerCount = multiplayerCount + 1;
+    
+    
+    
+}
+
+function gameWinnerMulti(){
+   
+    if(playerOneCounter > playerTwoCounter){
+        alert("Player One wins!");
+      
+        
+    }else if(playerTwoCounter > playerOneCounter){
+           alert("Player Two wins!");
+      
+    }else{
+        alert("its a tie")
+
+    }
+}
+
+
+function multiHome(){
+
+    $(singleChoice).empty();
+    $(header).empty();
+    mainscreen()
+    multiplayerCount = 1;
+    playerOneCounter = 0;
+    playerTwoCounter = 0;
+    playerOneActivation = 0;
+    playerTwoActivation = 0;
+}
+
+
+
+function multiRedo(){
+
+
+    $(singleChoice).empty();
+    $(header).empty();
+    multiPlayer()
+    multiplayerCount = 1;
+    playerOneCounter = 0;
+    playerTwoCounter = 0;
+    playerOneActivation = 0;
+    playerTwoActivation = 0;
+
 }
