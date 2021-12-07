@@ -37,6 +37,9 @@ function mainscreen(){
     $(dDiscript).append(description);
     $(flexDiv).append(dDiscript);
     $("#mainscreen").append(flexDiv);
+
+   
+    
     
    
     var button1=document.createElement("button");
@@ -410,6 +413,10 @@ function playerOneOrTwo(){
                 }    
 
                 multiplayerCount = multiplayerCount + 1;
+
+                if(multiplayerCount > 6){
+                    $(singleExplanation).html("game ended");
+                }
     
 
     }else {
