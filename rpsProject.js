@@ -201,7 +201,7 @@ function roundWinner(){
         $(infoContainer).empty();
         gameWinner(compCounter, playerCounter);
 
-        $(singleExplanation).html("game ended")
+        
 
         var goBack = document.createElement("button")
         $(goBack).attr("id", "restartButton");
