@@ -190,6 +190,11 @@ function roundWinner(){
     } 
 
     roundCounter = roundCounter + 1;
+
+    if(roundCounter > 3){
+
+        $(singleExplanation). html("Game Ended!")
+    }
     
     }else{
 
@@ -415,7 +420,8 @@ function playerOneOrTwo(){
                 multiplayerCount = multiplayerCount + 1;
 
                 if(multiplayerCount > 6){
-                    $(singleExplanation).html("game ended");
+                    $(singleExplanation).html("Game Ended!");
+
                 }
     
 
